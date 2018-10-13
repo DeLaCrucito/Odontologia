@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2017 07:17:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.BitacoraRecibos" table="bitacora_recibos" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="folio" type="int">
+            <column name="folio" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="alumnos" class="sys.model.Alumnos" fetch="select">
+            <column name="alumno" not-null="true" />
+        </many-to-one>
+        <many-to-one name="maestroMaterias" class="sys.model.MaestroMaterias" fetch="select">
+            <column name="clave" length="10" />
+        </many-to-one>
+        <many-to-one name="menuTratamientos" class="sys.model.MenuTratamientos" fetch="select">
+            <column name="tratamiento" not-null="true" />
+        </many-to-one>
+        <property name="nombrePaciente" type="string">
+            <column name="nombre_paciente" length="100" />
+        </property>
+        <property name="cantidad" type="int">
+            <column name="cantidad" not-null="true" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" not-null="true" />
+        </property>
+        <property name="comentario" type="string">
+            <column name="comentario" length="100" />
+        </property>
+        <property name="sexo" type="int">
+            <column name="sexo" not-null="true" />
+        </property>
+        <property name="clinica" type="int">
+            <column name="clinica" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

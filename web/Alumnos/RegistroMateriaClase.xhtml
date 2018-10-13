@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <h1>
+                            Alumnos
+                            <small>Agregar Materia</small>
+                        </h1>
+
+                        <p:separator/>
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+
+                        <h:form id="formInsertar">
+                            <p:panel id="panel" header="Materias" style="margin-bottom:5px; font-size: 11px;">
+                                <h:panelGrid columns="15" cellpadding="10">
+
+                                    <p:outputLabel value="Clave  "/><p:spacer width="10" height="10"/>
+                                    <p:inputText id="clave" value="#{beanListaAlumnos.listAlumnos.maestroMaterias.clave}"
+                                                 required="true" requiredMessage="Ingrese la clave" />
+
+                                    <p:spacer width="10" height="10"/>
+
+                                    <p:commandButton  value="Agregar" style="font-size: 12px;"
+                                                      oncomplete="PF('dlgConfirmar').show();"/>
+
+
+
+                                </h:panelGrid>
+                            </p:panel>
+                        </h:form>
+
+                        <h:form id="formMostrarMaterias">
+                            <p:dataTable id="tablaMostrarMaestros" var="master" value="#{beanListaAlumnos.list}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+
+                                <p:column headerText="Matricula">
+                                    <h:outputText value="#{master.alumnos.matricula}"/>
+                                </p:column>
+                                <p:column headerText="Nombre Completo">
+                                    <h:outputText value="#{master.alumnos.nombre} #{master.alumnos.apellidoPaterno} #{master.alumnos.apellidoMaterno}"/>
+                                </p:column>
+
+                                <p:column headerText="Semestre y Grupo">
+                                    <h:outputText value="#{master.alumnos.semestre} #{master.alumnos.grupo}"/>
+                                </p:column>
+
+                                <p:column headerText="Maestro">
+                                    <h:outputText value="#{master.maestroMaterias.maestro.nombre} #{master.maestroMaterias.maestro.apellidoPaterno} #{master.maestroMaterias.maestro.apellidoMaterno}"/>
+                                </p:column>
+                                
+                                 <p:column headerText="Materia">
+                                     <h:outputText value="#{master.maestroMaterias.materias.materia} "/>
+                                </p:column>
+                 
+                                <p:column headerText="Correo">
+                                    <h:outputText value="#{master.maestroMaterias.maestro.correo} "/>
+                                </p:column>
+                                
+                                   <p:column headerText="Clave materia">
+                                       <h:outputText value="#{master.maestroMaterias.clave} "/>
+                                </p:column>
+
+
+                            </p:dataTable>
+                        </h:form>
+
+                        <p:dialog id="dlgE" header="Confirmar Datos" widgetVar="dlgConfirmar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formConfirmar" style="font-size: 11px;">
+
+                                <h:outputText value="Deceas agregar esta materia?"/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{beanListaAlumnos.insertarMateria()}" update=":formMostrarMaterias:tablaMostrarMaestros :formInsertar"
+                                                 onclick="PF('dlgEliminar').hide();" immediate="true"/><p:spacer width="30" height="10"/>
+                                <p:commandButton value="No" onclick="PF('dlgConfirmar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+                    </section>
+
+
+
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

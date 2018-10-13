@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ac1e16f5-9646-4fcb-87e3-de30aa6fa7c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="313"/>
+	<queryString language="SQL">
+		<![CDATA[select * from materias]]>
+	</queryString>
+	<title>
+		<band height="116" splitType="Stretch">
+			<staticText>
+				<reportElement x="73" y="0" width="400" height="28" uuid="4abf4039-305d-4328-be1d-9aa91454cf2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidad Autónoma de Campeche.]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="473" y="0" width="82" height="79" uuid="f29eaca0-b8e0-4a81-b0d5-c33e697de501"/>
+				<imageExpression><![CDATA["C:\\FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="73" y="59" width="400" height="20" uuid="a55da886-caaf-4d44-b0bb-be4beb4f2965"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="73" height="79" uuid="61c85df1-3ca1-4fd4-a084-bdcd38161389"/>
+				<imageExpression><![CDATA["C:\\logo-uac-avanza-255x300.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="73" y="28" width="400" height="28" uuid="4040831e-3c70-4f1e-b7c0-546259c89147"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facultad de Odontología.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="79" width="555" height="36" uuid="26252b87-e86c-4cb7-bb8c-0b20e8142bd9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ha ocurrido un error al desplegar sus datos\nLo sentimos."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="641">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="1" y="0" width="555" height="641" uuid="76b4ad8a-f9e1-4c4e-9053-d2b7136bad87"/>
+				<imageExpression><![CDATA["C:\\FONDO_PAGG_FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+		</band>
+	</columnHeader>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="25" width="124" height="20" uuid="eeb21254-bb2a-4d92-8c3a-5f2a45d56249"/>
+				<text><![CDATA[Facultad de Odontología]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="436" y="25" width="80" height="20" uuid="d3725e81-a9b0-48bb-9bfb-54f83dccb44b"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="516" y="25" width="40" height="20" uuid="7b3ff2e4-5f09-4d0f-964f-606f9251bf56"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+</jasperReport>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2017 07:17:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.MaestroMaterias" table="maestro_materias" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="clave" type="string">
+            <column name="clave" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="maestro" class="sys.model.Maestro" fetch="select">
+            <column name="id_empleado" />
+        </many-to-one>
+        <many-to-one name="materias" class="sys.model.Materias" fetch="select">
+            <column name="Materia" />
+        </many-to-one>
+        <property name="grupo" type="string">
+            <column name="grupo" length="5" />
+        </property>
+        <property name="año" type="string">
+            <column name="año" length="10" />
+        </property>
+        <set name="listaAlumnoses" table="lista_alumnos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clave" length="10" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.ListaAlumnos" />
+        </set>
+        <set name="bitacoraReciboses" table="bitacora_recibos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="clave" length="10" />
+            </key>
+            <one-to-many class="sys.model.BitacoraRecibos" />
+        </set>
+    </class>
+</hibernate-mapping>

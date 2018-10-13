@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+            <ui:define name="content">
+                 <h:outputScript name="js/noupdate.js"/>
+                <div class="content-wrapper">
+                    <!-- Main content -->
+                    <section class="content">
+                        <h:form>
+                            <h:panelGrid class="panelGridCenter">
+                                    <p:commandButton value="Regresar a la búsqueda" action="Consultas.xhtml" />
+                                </h:panelGrid>
+                            <p:growl id="growl" sticky="true" showDetail="true"/>
+                            <p:wizard>
+                                
+                                <p:tab id="odonto" title="Control de placa">
+                                    <ui:include src="ControlPlaca_1.xhtml"/>
+                                </p:tab>
+
+                                <p:tab id="periodonto" title="Periodontograma">
+                                    <ui:include src="Periodontograma_1.xhtml"/>
+                                      <p:spacer/><p:spacer/>
+                                      <h:panelGrid class="panelGridCenter">
+
+                                        <p:commandButton value="Guardar consulta" action="#{ConsultaPaciente.insertarConsulta()}" class="btn btn-info"></p:commandButton>
+                                    </h:panelGrid>
+                                </p:tab>
+
+                            </p:wizard>
+                        </h:form>
+                    </section>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

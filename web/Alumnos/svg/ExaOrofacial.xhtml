@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+    <p:panel header="">
+        <p:panelGrid columns="2" layout="grid">
+            <p:panel>
+                <h1>Paciente</h1>
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel value="Nombre" />
+                    <p:inputText  id="NombrePaciente" value="#{BeanNuevoPaciente.paciente.nombre}" />
+                    <p:outputLabel value="Folio" />
+                    <p:inputText id="Folio" value="#{BeanNuevoPaciente.paciente.folio}"/>
+                </p:panelGrid>
+            </p:panel>
+            <p:panel>
+                <h1>Cara</h1>
+                <p:panelGrid columns="2" layout="grid">
+                    <p:outputLabel value="Forma de la cara"/>
+                    <p:selectOneRadio id="forma" value="#{BeanNuevoPaciente.examenOrofacial.caraForma}" layout="pageDirection">
+                        <f:selectItem itemLabel="Ovoide" itemValue="Ovoide" />
+                        <f:selectItem itemLabel="Cuadrada" itemValue="Cuadrada" />
+                        <f:selectItem itemLabel="Alargada" itemValue="Alargada" />
+                    </p:selectOneRadio>
+                    <p:outputLabel value="Labios: " />
+                    <p:selectOneRadio id="labios" value="#{BeanNuevoPaciente.examenOrofacial.caraLabios}" layout="pageDirection">
+                        <f:selectItem itemLabel="Activos" itemValue="Activos" />
+                        <f:selectItem itemLabel="Largos" itemValue="Largos" />
+                        <f:selectItem itemLabel="Medianos" itemValue="Medianos" />
+                        <f:selectItem itemLabel="Cortos" itemValue="Cortos" />
+                    </p:selectOneRadio>
+                    <p:outputLabel value="Bordes Bermellon: " />
+                    <p:selectOneRadio id="bordesbermellon" value="#{BeanNuevoPaciente.examenOrofacial.bordesBermellon}" layout="pageDirection">
+                        <f:selectItem itemLabel="Visibles" itemValue="Visibles" />
+                        <f:selectItem itemLabel="No visibles" itemValue="No visibles" />
+                    </p:selectOneRadio>
+                </p:panelGrid>
+            </p:panel>
+        </p:panelGrid>
+        <p:spacer/>
+        <p:panel>
+            <h1>Sistema Estomatognatico</h1>
+            <p:accordionPanel>
+                <p:tab title="ATM">
+                    <ui:include src="orofacial/Atm.xhtml"/>
+                </p:tab>
+                <p:tab title="Análisis de la Oclusión">
+                    <ui:include src="orofacial/Oclusion.xhtml"/>
+                </p:tab>
+                <p:tab title="Examen Oral">
+                    <ui:include src="orofacial/Oral.xhtml"/>
+                </p:tab>
+                <p:tab title="Hallazgos Radiográficos">
+                    <ui:include src="orofacial/Radiograficos.xhtml"/>
+                </p:tab>
+            </p:accordionPanel>
+        </p:panel>
+    </p:panel>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.ExamenOrofacial" table="examen_orofacial" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="analisisOclusion" class="sys.model.pacientes.AnalisisOclusion" fetch="select">
+            <column name="analisis_oclusion" />
+        </many-to-one>
+        <many-to-one name="atm" class="sys.model.pacientes.Atm" fetch="select">
+            <column name="atm" />
+        </many-to-one>
+        <many-to-one name="examenOral" class="sys.model.pacientes.ExamenOral" fetch="select">
+            <column name="examen_oral" />
+        </many-to-one>
+        <many-to-one name="hallazgosRadiograficos" class="sys.model.pacientes.HallazgosRadiograficos" fetch="select">
+            <column name="hallazgos_radiograficos" />
+        </many-to-one>
+        <many-to-one name="paciente" class="sys.model.pacientes.Paciente" fetch="select">
+            <column name="paciente" not-null="true" />
+        </many-to-one>
+        <property name="fecha" type="date">
+            <column name="fecha" length="10" not-null="true" />
+        </property>
+        <property name="caraForma" type="string">
+            <column name="cara_forma" />
+        </property>
+        <property name="caraLabios" type="string">
+            <column name="cara_labios" />
+        </property>
+        <property name="bordesBermellon" type="string">
+            <column name="bordes_bermellon" />
+        </property>
+    </class>
+</hibernate-mapping>

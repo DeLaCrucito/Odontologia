@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="consentimiento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3803b600-6d27-43f0-8ac8-c292427670f8">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="paciente" class="java.lang.String"/>
+	<parameter name="alumno" class="java.lang.String"/>
+	<parameter name="maestro" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from usuarios]]>
+	</queryString>
+	<field name="id_empleado" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="id_empleado"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="tipo" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="usuario" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="usuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<field name="contraseña" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="contraseña"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="usuarios"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="80" splitType="Stretch">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="1" width="70" height="79" uuid="1a86d693-7374-4d79-a391-22ec71f697eb"/>
+				<imageExpression><![CDATA["C:\\logo-uac-avanza-255x300.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="115" y="0" width="324" height="20" uuid="b9853185-93f3-4138-a7a6-acd337e709f8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[UNIVERSIDAD AUTÓNOMA DE CAMPECHE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="173" y="20" width="209" height="20" uuid="cbe31220-991e-46ac-9997-9094b0e2bfbf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[FACULTAD DE ODONTOLOGÍA]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="470" y="1" width="83" height="79" uuid="32ef9baa-24b0-42c4-a343-a09764ab9700"/>
+				<imageExpression><![CDATA["C:\\FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="140" y="59" width="267" height="20" uuid="52e2cf92-3e14-4d27-ab3f-43165825b0eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[CARTA DE CONSENTIMIENTO INFORMADO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="678" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="10" width="135" height="20" uuid="bc6dda94-cd80-48a9-8041-3c2e0bfcb676"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[A QUIEN CORRESPONDA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="40" width="536" height="130" uuid="bc5e10b5-da27-4475-86c8-a41dc3ed3944"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[EL (la) suscrito(a)                                                            por medio de la presente declaro que he acudido  a consulta a la Facultad de Odontología de la UAC, que es una institución de docencia-investigación y otorga servicios de atención estomatológica a la población. Que después de realizarme  un diagnóstico se me ha informado de mi estado de salud bucal y los requerimientos de atención y demás que serán cubiertos por mi cuenta. También se me ha informado de mi derecho a retirarme del tratamiento en el momento que así lo considere de acuerdo a mis instereses, sin que mi decisión afecte mis actuales o futuras relaciones con la Facultad de Odontología. Asimismo se me han aclarado todas mis dudas al respecto.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="116" y="41" width="200" height="15" uuid="ca0a89fe-0261-43eb-b35d-7d4198cded90"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{paciente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="180" width="536" height="74" uuid="b2bc84e7-ff86-4670-8f4f-252ce5919cff"/>
+				<textElement textAlignment="Justified">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Por lo anterior, acepto de conformidad el tratamiento y si mi caso, es de utilidad científica otorgo el consentimiento de que se tomen las fotografías y videos, autorizo a que sean proyectadas solamente para fines científicos siempre y cuando se me garantice el más absoluto respeto a mi intimidad y anonimato. De igual manera autorizo la presencia de estudiantes de Odontología y especialistas en formación como observadores durante el desarrollo de mi tratamiento.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="17" y="265" width="527" height="20" uuid="8d374f06-d79f-4f1c-9896-db5c839e70f2"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[San Francisco de Campeche, Camp, a______________________________]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="374" y="265" width="170" height="20" uuid="7157d065-8e61-49bf-8800-a833d83187d8"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="9" y="500" width="536" height="32" uuid="c19f871c-490c-44ca-b0aa-b804309d60bd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Rechazo el tratamiento y declaro que he sido ampliamente informado de las consecuencias de mi decisión]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="532" width="146" height="48" uuid="e62f57ff-7297-44b6-844f-099a07145083"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Paciente:\n"+$P{paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="533" width="146" height="47" uuid="34914e13-550b-4737-816f-b83e58d47f51"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Alumno:\n"+$P{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="404" y="533" width="139" height="47" uuid="c3973205-4a33-4647-87d5-4fb3b34279f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Docente:\n"+$P{maestro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="404" y="643" width="139" height="20" uuid="5b8ac920-4980-4249-a4da-1547733c47d4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="643" width="146" height="20" uuid="901911fc-25e1-49f6-ad77-b9b369102b37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[_______________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="643" width="146" height="20" uuid="8fe90120-f34c-4754-a407-e2276fafa1bc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[_______________________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="27" y="309" width="146" height="52" uuid="d076ac0e-8a99-40d1-a8f9-4554a6c8dcdd"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Paciente:\n"+$P{paciente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="201" y="310" width="146" height="50" uuid="dbc46fb8-0183-4151-b4a0-1fdeb820a58e"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Alumno:\n"+$P{alumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="310" width="139" height="50" uuid="628c3443-e2aa-4b06-b098-13e63eefba2f"/>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["Docente:\n"+$P{maestro}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="429" width="139" height="20" uuid="3baeb623-c555-4d0a-9635-dad1e4b6f6ea"/>
+				<text><![CDATA[________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="201" y="429" width="146" height="20" uuid="7ac9e566-5593-4644-afef-62746e00a9de"/>
+				<text><![CDATA[_________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="429" width="149" height="20" uuid="18791b1a-faff-41bc-b389-dda9100d2b12"/>
+				<text><![CDATA[_________________________]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="22" width="130" height="20" uuid="170929c6-7fa8-4383-b76e-6cef994c72bd"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Facultad de Odontología.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="22" width="70" height="20" uuid="89b02fd7-88c1-4945-bf18-2ed4c35292d5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<text><![CDATA[Impreso el dia ]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="220" y="22" width="80" height="20" uuid="e53131cc-dc00-419c-8755-d6da309f4ff3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="22" width="30" height="20" uuid="1f5d69ca-966b-458e-a131-2020986e76e3"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[ a las]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="330" y="22" width="88" height="20" uuid="68fd5817-bde9-4e70-88ff-7d18c7f29b7e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="435" y="22" width="80" height="20" uuid="b40b1754-a50e-4670-85b9-ffab82cf1dad"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="22" width="40" height="20" uuid="2f094575-8220-42d9-9004-7c7084c7664e"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.Atm" table="atm" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="crepitacion" type="string">
+            <column name="crepitacion" length="11" not-null="true" />
+        </property>
+        <property name="sensibilidad" type="string">
+            <column name="sensibilidad" length="11" not-null="true" />
+        </property>
+        <property name="dolor" type="string">
+            <column name="dolor" length="11" not-null="true" />
+        </property>
+        <property name="subluxacion" type="string">
+            <column name="subluxacion" length="11" not-null="true" />
+        </property>
+        <property name="habitosTension" type="string">
+            <column name="habitos_tension" length="6550" not-null="true" />
+        </property>
+        <property name="tamanoLengua" type="string">
+            <column name="tamano_lengua" not-null="true" />
+        </property>
+        <property name="torusMaxilar" type="string">
+            <column name="torus_maxilar" not-null="true" />
+        </property>
+        <property name="torusMandibular" type="string">
+            <column name="torus_mandibular" />
+        </property>
+        <property name="desviacion" type="string">
+            <column name="desviacion" length="11" not-null="true" />
+        </property>
+        <property name="desviacionApertura" type="string">
+            <column name="desviacion_apertura" length="25" />
+        </property>
+        <property name="desviacionCierre" type="string">
+            <column name="desviacion_cierre" length="25" />
+        </property>
+        <property name="maxilarU" type="string">
+            <column name="maxilar_u" length="25" />
+        </property>
+        <property name="maxilarV" type="string">
+            <column name="maxilar_v" length="25" />
+        </property>
+        <property name="maxilarAfilado" type="string">
+            <column name="maxilar_afilado" length="25" />
+        </property>
+        <property name="mandibularU" type="string">
+            <column name="mandibular_u" length="25" />
+        </property>
+        <property name="mandibularV" type="string">
+            <column name="mandibular_v" length="25" />
+        </property>
+        <property name="mandibularAfilado" type="string">
+            <column name="mandibular_afilado" length="25" />
+        </property>
+        <set name="examenOrofacials" table="examen_orofacial" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="atm" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ExamenOrofacial" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Alumno</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <h:outputStylesheet name="/Estilos/bootstrap/css/bootstrap.min.css"/>
+        <h:outputStylesheet name="/Estilos/dist/css/AdminLTE.css"/>
+        <h:outputStylesheet name="/Estilos/dist/css/skins/skin-blue_FDO.css"/>
+        <h:outputStylesheet name="/Estilos/font-awesome/css/font-awesome.min.css"/>
+
+        <h:outputScript name="/Estilos/js/bootstrap.min.js"/>
+        <h:outputScript name="/Estilos/js/jquery.slimscroll.min.js"/>
+        <h:outputScript name="/Estilos/js/fastclick.js"/>
+        <h:outputScript name="/Estilos/js/demo.js"/>      
+        <h:outputScript name="/Estilos/js/adminlte.min.js"/>
+        <h:outputScript name="/Estilos/dist/js/app.min.js"/>
+        
+    </h:head>
+
+    <h:body class="hold-transition skin-blue sidebar-mini">
+
+        <div class="wrapper">
+            <div id="top">
+                <ui:insert name="top">
+                    <header class="main-header">
+
+                        <!-- Logo -->
+                        <a href="Principal.xhtml" class="logo">
+                            <!-- mini logo for sidebar mini 50x50 pixels -->
+                            <span class="logo-mini"><b>F</b>O</span>
+                            <!-- logo for regular state and mobile devices -->
+                            <span class="logo-lg"><b>F de </b>O</span>
+                        </a>
+
+                        <!-- Header Navbar -->
+                        <nav class="navbar navbar-static-top" role="navigation">
+                            <!-- Sidebar toggle button-->
+                            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                                <span class="sr-only">Toggle navigation</span>
+                            </a>
+                            <!-- Navbar Right Menu -->
+                            <div class="navbar-custom-menu">
+                                <ul class="nav navbar-nav">
+                                    
+                                    <!-- User Account Menu -->
+                                    <li class="dropdown user user-menu">
+                                        <!-- Menu Toggle Button -->
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <!-- The user image in the navbar-->
+                                            <h:graphicImage library="images" name="BITA.png" class="user-image" alt="User Image"/>
+                                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                            <h:outputText value="#{session.getAttribute('tokenAlumno')}" />
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <!-- The user image in the menu -->
+                                            <li class="user-header">
+                                                <h:graphicImage library="images" name="fdo.png" class="img-circle" alt="User Image"/>
+
+                                            </li>
+                                            <!-- Menu Body -->
+                                            <li class="user-body">
+                                                <div class="col-xs-4 text-center">
+
+                                                </div>
+                                                <div class="col-xs-4 text-center">
+
+                                                </div>
+                                                <div class="col-xs-4 text-center">
+
+                                                </div>
+                                            </li>
+                                            <!-- Menu Footer-->
+                                            <li class="user-footer">
+                                                <div class="pull-left">
+                                                    <h:form id="editar">
+                                                        <p:commandButton value="Editar Perfil" oncomplete="PF('dlgNuevo').show();" 
+                                                                         update=":formEditarPerfil" style="font-size: 12px;" />
+                                                    </h:form>
+                                                    <p:dialog id="dlgEditarPerfil" header="Editar su perfil" widgetVar="dlgNuevo" showEffect="drop" hideEffect="drop" modal="true">
+                                                        <h:form id="formEditarPerfil">
+                                                            <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                                                <p:outputLabel value="Usuario actual: "/>
+                                                                <p:inputText value="#{beanAlumnos.alumnos.usuario}"
+                                                                             required="true" requiredMessage="Su nombre de usuario es obligatorio"/>
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Nuevo usuario:"/>
+                                                                <p:inputText value="#{beanAlumnos.newUser}"
+                                                                             required="true" requiredMessage="Nuevo usuario es obligatorio"/>
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Contraseña actual:"/>
+                                                                <p:password id="pwd3" value="#{beanAlumnos.alumnos.contraseña}" 
+                                                                            required="true" />
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Nueva contraseña:"/>
+                                                                <p:password id="pwd1" value="#{beanAlumnos.newPass}" match="pwd2" label="Contraseña" feedback="true" weakLabel="Muy Debil"
+                                                                            goodLabel="Media" strongLabel="Fuerte" inline="true" promptLabel="Digite una contraseña" 
+                                                                            required="true"  requiredMessage="Contraseña es obligatorio"
+                                                                            validatorMessage="¡Contraseña Incorrecta! Verifiquela"/>   
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Confirmar contraseña"/>
+                                                                <p:password id="pwd2" value="#" 
+                                                                            required="true" />
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Semestre cursando:"/>
+                                                                <p:inputText value="#{beanAlumnos.alumnos.semestre}"
+                                                                             required="true" requiredMessage="Semestre es obligatorio"/>
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:outputLabel value="Grupo: "/>
+                                                                <p:inputText value="#{beanAlumnos.alumnos.grupo}"
+                                                                             required="true" requiredMessage="Grupo es obligatorio"/>
+                                                                <p:spacer/><p:spacer/>
+                                                                <p:spacer/><p:spacer/> 
+                                                                <p:commandButton value="Guardar" actionListener="#{beanAlumnos.editar()}"  
+                                                                                 oncomplete="PF('dlgNuevo').hide();" update=":formEditarPerfil"/>
+                                                                
+                                                            </h:panelGrid>
+                                                        </h:form>
+                                                    </p:dialog>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <h:form id="salir">
+                                                        <p:commandButton value="Salir" actionListener="#{beanAlumnos.logout(actionEvent)}" style="font-size: 12px;" />
+                                                    </h:form>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- Control Sidebar Toggle Button -->
+                                    <!--                                    <li>
+                                                                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                                                                        </li>-->
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+                </ui:insert>
+            </div>
+            <div>
+                <div id="left">
+                    <ui:insert name="left">
+                        <aside class="main-sidebar">
+
+                            <!-- sidebar: style can be found in sidebar.less -->
+                            <section class="sidebar">
+
+                                <!-- Sidebar user panel (optional) -->
+                                <div class="user-panel">
+                                    <div class="pull-left image">
+                                        <img src="../resources/Estilos/img/fo_web_logo.png"  alt="User Image"/>
+                                    </div>
+                                    <div class="pull-left info">
+                                        <p>Alumno</p>
+                                        <!-- Status -->
+<!--                                    <a href="#"><i class="fa fa-circle text-success"></i>Online</a>-->
+                                    </div>
+                                </div>
+
+                                <!-- search form (Optional) -->
+<!--                                <form action="#" method="get" class="sidebar-form">
+                                    <div class="input-group">
+                                        <input type="text" name="q" class="form-control" placeholder="Search..."/>
+                                        <span class="input-group-btn">
+                                            <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </form>-->
+                                <!-- /.search form -->
+
+                                <!-- Sidebar Menu -->
+                                <ul class="sidebar-menu">
+                                    <li class="header">INICIO</li>
+                                    <!-- Optionally, you can add icons to the links -->
+                                    <li class="treeview">
+                                        <a href=""><i class="glyphicon glyphicon-user"></i> <span>Materias</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="RegistroMateriaClase.xhtml">Agregar Materias</a></li>
+                                            <li><a href="TratamientosRealizados.xhtml">Tratamientos Realizados</a></li>
+
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="treeview">
+                                        <a href=""><i class="glyphicon glyphicon-folder-open"></i> <span>Expedientes</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="NuevoPaciente.xhtml">Nuevo paciente</a></li>
+                                            <li><a href="Consultas.xhtml">Consulta subsecuente</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"><i class="fa fa-link"></i> <span>Acerca de...</span>
+                                            <span class="pull-right-container">
+                                                <i class="fa fa-angle-left pull-right"></i>
+                                            </span>
+                                        </a>
+                                        <ul class="treeview-menu">
+                                            <li><a href="#">Portal de Odontología</a></li>           
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </section>
+                            <!-- /.sidebar -->
+                        </aside>
+                    </ui:insert>
+                </div>
+                <div id="content" class="left_content">
+                    <ui:insert name="content">Content</ui:insert>
+                </div>
+            </div>
+            <div id="bottom">
+                <ui:insert name="bottom">
+                    <footer class="main-footer">
+                        <!-- To the right -->
+                        <div class="pull-right hidden-xs">
+                            Prohibida la reproducción, alteración y violación de datos.
+                        </div>
+                        <!-- Default to the left -->
+                        <strong>Copyright 2017 <a href="http://fi.uacam.mx/">Facultad Ingeniería.</a><a href="http://uacam.mx/">Universidad Autónoma de Campeche.</a></strong> All rights reserved.
+                    </footer>
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+
+</xhtml>

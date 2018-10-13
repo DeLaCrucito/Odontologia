@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:p="http://primefaces.org/ui"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaCoordinacion.xhtml">
+
+            <ui:define name="content">
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <title>REPORTES</title>
+                        <h1>
+                            Reportes
+                            <small>Coordinación</small>
+                        </h1>
+                        <p:dialog modal="true" widgetVar="statusDialog" header="Status" draggable="false" closable="false" resizable="false">
+                            <p:graphicImage name="/images/cargando.gif" />
+                        </p:dialog>
+                        <p:accordionPanel dynamic="true">
+                            <p:tab title="Reporte general">
+
+                                <h:panelGrid columns="2" cellpadding="10">
+                                    <p:graphicImage value="./../resources/images/pdf.jpg"/>
+                                    <h:outputText value="En esta opcion podrá imprimir toda la información del sistema desde el primer dia en que se implantó hasta
+                                                  el dia de hoy. Contendrá datos de los tratamientos en las diferentes clinicas realizados por los diferentes alumnos" />
+                                </h:panelGrid>
+
+                                <h:form>
+                                    <p:commandButton value="Descargar" ajax="false" onclick="PrimeFaces.monitorDownload(start, stop);" icon="ui-icon-arrowthick-1-s">
+                                        <p:fileDownload value="#{beanReportes.reporteGeneral1()}" />
+                                    </p:commandButton>
+                                </h:form>
+
+                                <p:separator style="width:1050px;height:10px" />
+
+                            </p:tab>
+
+                            <p:tab title="Reporte por clinica">
+
+                                <h:form>
+
+                                    <h:panelGrid columns="3"  cellpadding="10">
+                                        <p:graphicImage value="../resources/images/pdf.jpg" />
+                                        <h:outputText value= "Favor de seleccionar una de las clinicas de la lista. Y a continuación se generará un reporte de ésta clínica 
+                                                      con toda la información del sistema desde el primer dia en que se implantó hasta el dia de hoy. "/>
+                                        <h:selectOneMenu id="txt3" value="#{beanReportes.clinica}" required="true" requiredMessage="Seleccione la clinica">
+                                            <f:selectItem itemLabel="Seleccione clinica" itemValue="" noSelectionOption="true" />
+                                            <f:selectItem itemLabel="Clinica 1" itemValue="1" />
+                                            <f:selectItem itemLabel="Clinica 2" itemValue="2" />
+                                            <f:selectItem itemLabel="Clinica 3" itemValue="3" />
+                                        </h:selectOneMenu>
+                                    </h:panelGrid>
+
+                                    <p:commandButton value="Descargar" ajax="false" onclick="PrimeFaces.monitorDownload(start, stop);" icon="ui-icon-arrowthick-1-s">
+                                        <p:fileDownload value="#{beanReportes.reportePorClinica2()}" />
+                                    </p:commandButton>
+
+                                </h:form>
+
+                                <p:separator style="width:1050px;height:10px" />
+
+                            </p:tab>
+
+                            <p:tab title="Reporte de todas las clinicas dentro de fecha determinada">
+
+                                <h:form>
+                                    <h:panelGrid columns="6" cellpadding="30" >
+                                        <p:graphicImage value="../resources/images/pdf.jpg" />
+                                        <h:outputText value="Usted generá un reporte de todas las clinicas dentro de un determinado tiempo que establezca." />
+                                        <p:outputLabel for="popup" value="Desde: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup" value="#{beanReportes.fecha1}" />
+                                        <p:outputLabel for="popup2" value="Hasta: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup2" value="#{beanReportes.fecha2}" />
+                                    </h:panelGrid>
+                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                        <p:fileDownload value="#{beanReportes.reporteClinicasDentroDeFechaDet3()}"/>
+                                    </p:commandButton>
+                                </h:form>
+                                <p:separator style="width:1050px;height:10px" />
+                            </p:tab>
+                            <p:tab title="Reporte por clinica dentro de fecha determinada">
+                                <h:form>
+                                    <h:panelGrid columns="7" cellpadding="30" >
+                                        <p:graphicImage value="../resources/images/pdf.jpg" />
+                                        <h:outputText value="Usted generá un reporte con la información de la clinica que seleccione y dentro de un determinado tiempo que establezca." />
+                                        <h:selectOneMenu id="txt4" value="#{beanReportes.clinica}" required="true" requiredMessage="Seleccione la clinica">
+                                            <f:selectItem itemLabel="Seleccione clinica" itemValue="" noSelectionOption="true" />
+                                            <f:selectItem itemLabel="Clinica 1" itemValue="1" />
+                                            <f:selectItem itemLabel="Clinica 2" itemValue="2" />
+                                            <f:selectItem itemLabel="Clinica 3" itemValue="3" />
+                                        </h:selectOneMenu>
+                                        <p:outputLabel for="popup3" value="Desde: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup3" value="#{beanReportes.fecha1}" />
+                                        <p:outputLabel for="popup4" value="Desde: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup4" value="#{beanReportes.fecha2}" />
+                                    </h:panelGrid>
+
+                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                        <p:fileDownload value="#{beanReportes.reportePorClinicaPorFechas4()}"/>
+                                    </p:commandButton>
+                                </h:form>
+                                <p:separator style="width:1050px;height:10px" />
+                            </p:tab>
+                            <p:tab title="Reporte de alumnos destacados">
+                                <h:form>
+                                    <h:panelGrid columns="7" cellpadding="30" >
+                                        <p:graphicImage value="../resources/images/pdf.jpg" />
+                                        <h:outputText value="Usted generá un reporte con la información de todas las clinicas en donde los alumnos realizaron la mayor cantidad de tratamientos dentro de un determinado tiempo que establezca." />
+                                        
+                                        <p:outputLabel for="popup5" value="Desde: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup5" value="#{beanReportes.fecha1}" />
+                                        <p:outputLabel for="popup6" value="Desde: " />
+                                        <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup6" value="#{beanReportes.fecha2}" />
+                                    </h:panelGrid>
+
+                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                        <p:fileDownload value="#{beanReportes.alumnosDestacados5()}"/>
+                                    </p:commandButton>
+                                </h:form>
+                                <p:separator style="width:1050px;height:10px" />
+                            </p:tab>
+                        </p:accordionPanel>
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+        <script type="text/javascript">
+            function start() {
+                PF('statusDialog').show();
+            }
+
+            function stop() {
+                PF('statusDialog').hide();
+            }
+        </script>
+    </body>
+</xhtml>

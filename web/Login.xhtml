@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="resources/css/styles.css"/>
+    </h:head>
+    <h:body>
+        <br></br>
+        <div id="login">
+            <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+            <h:form>
+                <h:graphicImage name="images/imagen1.png" ></h:graphicImage>
+                <h1 style="text-align: center;">
+                    BIENVENIDO<br/>
+                    <small>Al portal de Odontología</small>
+                </h1>
+                <p:fieldset id="fieldLogin" style="text-align: center; margin-bottom:20px">
+                    <h:panelGrid columns="2" cellpadding="5" >
+                        <p:outputLabel for="nomeUsuario" value="Usuario: " />
+                        <p:inputText id="nomeUsuario" value="#{LoginMB.usuario.user}" required="true" requiredMessage="Nombre de usuario es obligatorio" />
+                        <p:outputLabel id="senha" value="Contraseña:"/>
+                        <p:password id="senhaUsuario" value="#{LoginMB.usuario.contraseña}" required="true" requiredMessage="Contraseña es obligatorio"/>
+                    </h:panelGrid>
+                    <h:panelGrid columns="2" cellpadding="5" >
+                        <p:commandButton value="Ingresar al portal" action="#{LoginMB.login(actionEvent)}" ajax="false" />
+                        <p:splitButton value="¿Nuevo usuario?" actionListener="#" >
+                            <p:menuitem oncomplete="PF('dlgNuevoDocente').show();" update=":formNuevoDocente" style="font-size: 12px;" value="Docente" icon="ui-icon-extlink" />/>
+                            <p:menuitem oncomplete="PF('dlgNuevoFarmacia').show();" update=":formNuevoFarmacia" style="font-size: 12px;" value="Farmacia" icon="ui-icon-extlink" />
+                        </p:splitButton>
+                    </h:panelGrid>
+                </p:fieldset>
+            </h:form>
+
+            <p:dialog id="dlgNuevoDocente" header="Nuevo Registro Docente" widgetVar="dlgNuevoDocente" showEffect="drop" hideEffect="drop" modal="true">
+                <h:form id="formNuevoDocente">
+                    <h:panelGrid columns="2" cellpadding="5" >
+                        <p:outputLabel value="Numero de empleado:"/>
+                        <p:inputText id="id" value="#{LoginMB.maestro.idEmpleado}" required="true" requiredMessage="Número de empleado es obligatorio"/>
+                        <p:outputLabel value="Usuario:"/>
+                        <p:inputText id="user" value="#{LoginMB.usuario.user}" required="true" requiredMessage="Usuario es obligatorio"/>
+                        <p:outputLabel value="Contraseña:"/>
+                        <p:password id="pass" value="#{LoginMB.usuario.contraseña}" required="true" requiredMessage="Contraseña es obligatorio"/>
+                        <p:spacer></p:spacer>
+                        <p:spacer></p:spacer>
+                        <f:facet name="footer" >
+                            <p:commandButton  value="Guardar" actionListener="#{LoginMB.insertarDocente()}" update=":formNuevoDocente" oncomplete="PF('dlgNuevoDocente').hide();"/>
+                            <p:commandButton  value="Cancelar" update=":formNuevoDocente" immediate="true" onclick="PF('dlgNuevoDocente').hide();" />
+                        </f:facet>  
+                    </h:panelGrid>        
+                </h:form>
+            </p:dialog>
+
+            <p:dialog id="dlgNuevoFarmacia" header="Nuevo Registro Farmacia" widgetVar="dlgNuevoFarmacia" showEffect="drop" hideEffect="drop" modal="true">
+                <h:form id="formNuevoFarmacia">
+                    <h:panelGrid columns="2" cellpadding="5" >
+                        <p:outputLabel value="Numero de empleado:"/>
+                        <p:inputText id="id" value="#{LoginMB.encargada.idEmpleado}" required="true" requiredMessage="Número de empleado es obligatorio"/>
+                        <p:outputLabel value="Usuario:"/>
+                        <p:inputText id="user" value="#{LoginMB.usuario.user}" required="true" requiredMessage="Usuario es obligatorio"/>
+                        <p:outputLabel value="Contraseña:"/>
+                        <p:password id="pass" value="#{LoginMB.usuario.contraseña}" required="true" requiredMessage="Contraseña es obligatorio"/>
+                        <p:spacer></p:spacer>
+                        <p:spacer></p:spacer>
+                        <f:facet name="footer" >
+                            <p:commandButton  value="Guardar" actionListener="#{LoginMB.insertarFarmacia()}" update=":formNuevoFarmacia" oncomplete="PF('dlgNuevoFarmacia').hide();"/>
+                            <p:commandButton  value="Cancelar" update=":formNuevoFarmacia" immediate="true" onclick="PF('dlgNuevoFarmacia').hide();" />
+                        </f:facet>  
+                    </h:panelGrid>
+                </h:form>
+            </p:dialog>
+
+        </div>
+    </h:body>
+</xhtml>

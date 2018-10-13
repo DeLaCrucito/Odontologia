@@ -1,0 +1,77 @@
+body {
+    margin:0;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    line-height:20px;
+    color:#fff;
+    background-color:#fff
+}
+
+#login { 
+    border-top:10px solid #93c01f;
+    padding: 0px 0px;
+    width: 59%;
+    background: #4d4d4d;
+    height: 550px;
+    width: 350px;
+    margin: auto;
+    box-shadow: 0 0 15px black;
+}
+
+#bienvenida{
+    
+}
+/*
+
+#geral {
+    width:960px;
+    margin:0 auto;
+    background:#ddd;
+}
+#cabecalho {
+    background:#fdd;
+}
+#conteudo-1 {
+    background: #bfb;
+    float: left;
+    width: 240px;
+}*/
+/*
+#conteudo-2 {
+    float: right;
+    width: 720px;
+}
+
+#conteudo-2-1 {
+    background:#ddf;
+    float: left;
+    width: 480px;
+}
+#conteudo-2-2 {
+    background:#dff;
+    float: right;
+    width: 240px;
+}
+#rodape {
+    background:#ff9;
+}
+
+#clock {
+    float: right;
+}*/
+
+img{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+body{
+    background: #1a1a1a;
+}
+bodyAlumno{
+    background: #00085d;
+}

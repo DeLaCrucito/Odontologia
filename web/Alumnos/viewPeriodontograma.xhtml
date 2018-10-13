@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<body>
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <div class="content-wrapper">
+                        <section class="content">
+                            <p:panel header="Detalles de Periodontograma">
+                            <h:outputStylesheet library="css" name="odontograma.css"/>
+                            <script>
+                                window.onload = function() {
+                                    var standard = "/FdO-3.0/pages/javax.faces.resource/";
+                                    var caja = document.getElementById('j_idt61:Odontograma');
+                                    var textobase = "#{ConsultaPaciente.dienteBDperi}";
+                                    var arreglobase = textobase.split(",");
+                                    var seteadiente18 = document.getElementsByClassName("dienteimg");
+                                    var qwe = [];
+                                    for (var i = 0; i &lt; seteadiente18.length; i++){
+                                        for(var j = 0; j &lt; arreglobase.length; j++ ){
+                                            if(i===j){
+                                                qwe[i] = seteadiente18[i].setAttribute("src",  standard+arreglobase[j]);
+                                            }
+                                        }
+                                    }
+                                };
+                            </script>
+                            <style>
+                                .imgpeque{
+                                    align-content: center;
+                                    height:auto;
+                                    width:auto;
+                                    height:18px;
+                                    width: 18px;
+                                }
+                                .normalpic{
+                                    align-content: center;
+                                    max-height: 70px;
+                                    height:auto;
+                                    width:auto;
+                                    max-width: 70px;
+                                }
+                                .temporales{
+                                    align-content: center;
+                                    max-height: 50px;
+                                    height:auto;
+                                    width: auto;
+                                    max-width: 50px;
+                                }
+                            </style>
+                            <p:spacer/>
+                             <h:outputScript name="js/noupdate.js"/>
+                             <h:panelGrid class="panelGridCenter">
+                                <p:commandButton value="Volver al historial" action="#{ConsultaPaciente.verHistorial(ConsultaPaciente.verperiodontograma.paciente.id,ConsultaPaciente.verperiodontograma.paciente.nombre,ConsultaPaciente.verperiodontograma.paciente.folio)}" class="btn btn-info"></p:commandButton>
+
+                             </h:panelGrid>
+                             <p:spacer/>
+                            <p:remoteCommand name="Enviaimg" action="#{ConsultaPaciente.Obtienetodo}" process="@this"/>
+                        <p:remoteCommand name="Mensajes" action="#{ConsultaPaciente.info}" process="@this"/>
+                        <h4>Paciente: <b>#{ConsultaPaciente.verperiodontograma.paciente.nombre}</b></h4>
+                        <h4>Fecha de consulta: <b>#{ConsultaPaciente.cuando}</b></h4>
+                        <p:spacer/>
+                        
+                        <p:panelGrid class="panelGridCenter" layout="grid" columns="1">
+                            
+                            <h:panelGrid class="panelGridCenter" cellspacing="5">
+                                <p:spacer/>
+                                <p:panelGrid columns="2" class="panelGridCenter">
+
+                                    <p:outputLabel value="No está el diente"/>
+                                    <p:graphicImage name="svg/tache.png" class="imgpeque"/>
+
+                                    <p:outputLabel value="Obturación"/>
+                                    <p:graphicImage name="svg/azul.png" class="imgpeque"/>
+
+                                    <p:outputLabel value="Caries"/>
+                                    <p:graphicImage name="svg/rojo.png" class="imgpeque"/>
+
+                                    <p:outputLabel value="Obturación con caries"/>
+                                    <p:graphicImage name="svg/amarillo.png" class="imgpeque"/>
+
+                                </p:panelGrid>
+                                <p:spacer/>
+                                <p:panelGrid class="panelGridCenter">
+                                <h:panelGrid id="Odontograma" >
+                                    <h:panelGrid class="panelGridCenter">
+
+                                        <p:spacer/>
+                                            <p:panelGrid columns="16" class="panelGridCenter">
+                                                <h:outputLabel value="18"/>
+                                                <h:outputLabel value="17"/>
+                                                <h:outputLabel value="16"/>
+                                                <h:outputLabel value="15"/>
+                                                <h:outputLabel value="14"/>
+                                                <h:outputLabel value="13"/>
+                                                <h:outputLabel value="12"/>
+                                                <h:outputLabel value="11"/>
+                                                <h:outputLabel value="21"/>
+                                                <h:outputLabel value="22"/>
+                                                <h:outputLabel value="23"/>
+                                                <h:outputLabel value="24"/>
+                                                <h:outputLabel value="25"/>
+                                                <h:outputLabel value="26"/>
+                                                <h:outputLabel value="27"/>
+                                                <h:outputLabel value="28"/>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/18.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/17.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/16.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/15.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/14.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/13.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/12.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/11.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/21.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/22.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/23.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/24.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/25.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/26.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/27.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/28.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                            </p:panelGrid>
+                                            <p:spacer/>
+                                            <p:panelGrid columns="10" class="panelGridCenter">
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/55.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/54.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/53.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/52.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/51.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/61.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/62.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/63.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/64.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/65.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:outputLabel value="55"/>
+                                                <h:outputLabel value="54"/>
+                                                <h:outputLabel value="53"/>
+                                                <h:outputLabel value="52"/>
+                                                <h:outputLabel value="51"/>
+                                                <h:outputLabel value="61"/>
+                                                <h:outputLabel value="62"/>
+                                                <h:outputLabel value="63"/>
+                                                <h:outputLabel value="64"/>
+                                                <h:outputLabel value="65"/>
+                                            </p:panelGrid>
+                                            <p:spacer/>
+                                            <p:panelGrid columns="10" class="panelGridCenter">
+                                                <h:outputLabel value="85"/>
+                                                <h:outputLabel value="84"/>
+                                                <h:outputLabel value="83"/>
+                                                <h:outputLabel value="82"/>
+                                                <h:outputLabel value="81"/>
+                                                <h:outputLabel value="71"/>
+                                                <h:outputLabel value="72"/>
+                                                <h:outputLabel value="73"/>
+                                                <h:outputLabel value="74"/>
+                                                <h:outputLabel value="75"/>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/85.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/84.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/83.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/82.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/81.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/71.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/72.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/73.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/74.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/75.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                            </p:panelGrid>
+                                            <p:spacer/>
+                                            <p:panelGrid columns="16" class="panelGridCenter">
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/48.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/47.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/46.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/45.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/44.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/43.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/42.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/41.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/31.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/32.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/33.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/34.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/35.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/36.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/37.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid><p:graphicImage name="svg/dientes/38.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:outputLabel value="48"/>
+                                                <h:outputLabel value="47"/>
+                                                <h:outputLabel value="46"/>
+                                                <h:outputLabel value="45"/>
+                                                <h:outputLabel value="44"/>
+                                                <h:outputLabel value="43"/>
+                                                <h:outputLabel value="42"/>
+                                                <h:outputLabel value="41"/>
+                                                <h:outputLabel value="31"/>
+                                                <h:outputLabel value="32"/>
+                                                <h:outputLabel value="33"/>
+                                                <h:outputLabel value="34"/>
+                                                <h:outputLabel value="35"/>
+                                                <h:outputLabel value="36"/>
+                                                <h:outputLabel value="37"/>
+                                                <h:outputLabel value="38"/>
+                                            </p:panelGrid>
+                                        </h:panelGrid>
+                                        <p:spacer/>
+                                        <p:spacer/>
+                                        <p:messages id="Correct" showDetail="true" autoUpdate="true" closable="true"/>
+                                    </h:panelGrid>
+                                </p:panelGrid>
+                                </h:panelGrid>
+                                <p:spacer/>
+                            </p:panelGrid>     
+                        </p:panel>
+
+                        </section>
+                    </div>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+</body>
+</html>
+
+
+
+
+

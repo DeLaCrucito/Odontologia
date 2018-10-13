@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaMaestro.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <h1>
+                            Lista de Alumnos
+                            <small>Maestro</small>
+                        </h1>
+
+                        <p:separator/>
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+
+                        <h:form id="formInsertar">
+                            <p:panel id="panel" header="Materias" style="margin-bottom:5px; font-size: 11px;">
+                                <h:panelGrid columns="15" cellpadding="10">
+
+                                    <p:outputLabel value="Materia  "/><p:spacer width="10" height="10"/>
+                                    <p:selectOneMenu id="materia" value="#{beanMaestroMaterias.maestroMaterias.materias.idMateria}"
+                                                     required="true" requiredMessage="Seleccione una Materia" >
+                                        <f:selectItem itemLabel="---Seleccione---"/>
+                                        <f:selectItems value="#{beanMaestroMaterias.listarMaterias}"/>
+                                        <f:ajax execute="materia" render="grupo"/>
+                                    </p:selectOneMenu>
+                                    <p:spacer width="10" height="10"/>
+                                    <p:outputLabel value="Grado"/> <p:spacer width="10" height="10"/>
+                                    <p:selectOneMenu id="grupo" value="#{beanMaestroMaterias.maestroMaterias.grupo}"
+                                                     required="true" requiredMessage="Seleccione el grupo">
+                                        <f:selectItem itemLabel="---Seleccione---"/>
+                                        <f:selectItems value="#{beanMaestroMaterias.listarGrupo}"/>
+                                        <f:ajax execute="grupo" render="grado" />
+                                    </p:selectOneMenu>
+                                    <p:spacer width="10" height="10"/>
+                                    <p:outputLabel value="Grupo"/><p:spacer width="10" height="10"/>
+                                    <p:selectOneMenu id="grado" value="#{beanMaestroMaterias.maestroMaterias.año}"
+                                                     required="true" requiredMessage="Seleccione el grado">
+                                        <f:selectItem itemLabel="---Seleccione---"/> 
+                                        <f:selectItems value="#{beanMaestroMaterias.listarGrado}"/>
+                                        
+                                    </p:selectOneMenu><p:spacer width="10" height="10"/>
+                                    <p:commandButton actionListener="#{beanMaestroMaterias.buscarLista()}" class="btn btn-info" value="Mostrar" update=":formMostrarLista:tablaMostrarLista"/>
+                                     
+                                     
+
+                                </h:panelGrid>
+                                 </p:panel>
+        
+
+                        <p:separator/>
+
+                       
+                          
+                        </h:form>
+                        
+                        
+                           <h:form id="formMostrarLista">
+                               <p:dataTable id="tablaMostrarLista" var="master" value="#{beanMaestroMaterias.listarAlumnos}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+
+                                <p:column headerText="Nombre Completo ">
+                                    <h:outputText value="#{master.alumnos.nombre} #{master.alumnos.apellidoPaterno} #{master.alumnos.apellidoMaterno}"/>
+                                </p:column>
+                                    <p:column headerText="Matricula ">
+                                        <h:outputText value="#{master.alumnos.matricula}"/>
+                                </p:column>
+                                    <p:column headerText="Semestre ">
+                                        <h:outputText value="#{master.alumnos.semestre}"/>
+                                </p:column>
+                                   <p:column headerText="Grupo ">
+                                       <h:outputText value="#{master.alumnos.grupo}"/>
+                                </p:column>
+                                    <p:column headerText="Clave ">
+                                        <h:outputText value="#{master.maestroMaterias.clave}"/>
+                                </p:column>
+                              
+                            </p:dataTable>
+                        </h:form>
+                        
+                        
+                       
+                        <p:separator/>
+                       
+                     
+                    </section><!-- /.content -->
+                </div><!-- /.content-wrapper -->
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

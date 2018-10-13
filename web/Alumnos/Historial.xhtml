@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>foo = #{flash.keep.nuevopaciente}
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <h:outputScript name="js/noupdate.js"/>
+                        <h:form id="formMostrar">
+                            
+                            <p:panel>
+                                <h:panelGrid class="panelGridCenter">
+                                    <h4>Paciente: <b>#{ConsultaPaciente.paciente.nombre}</b></h4>
+                                    <h4>Número de folio: <b>#{ConsultaPaciente.paciente.folio}</b></h4>
+                                    <p:spacer/>
+                                    <p:commandButton value="Regresar a la búsqueda" action="Consultas.xhtml" />
+                                </h:panelGrid>
+                            </p:panel>
+
+                            <p:spacer/>
+                                <p:dataTable id="dataTable" var="pacientes" value="#{ConsultaPaciente.consulta}"
+                                             emptyMessage="No hay datos" paginator="true" rows="10">
+                                    <p:column style="text-align: center;">
+                                        <f:facet name="header">
+                                            <h:outputText value="Fecha de consulta" />
+                                        </f:facet>
+                                        <h:outputText value="#{pacientes.fecha}" />
+                                    </p:column>
+
+                                    <p:column style="text-align: center;">
+                                        <f:facet name="header">
+                                            <h:outputText value="Control de placa" />
+                                        </f:facet>
+                                        <p:commandButton value="Ver Placa" action="#{ConsultaPaciente.verControlPlaca(pacientes.controlPlaca,pacientes.fecha)}" class="btn btn-info"></p:commandButton>
+                                    </p:column>
+
+                                    <p:column style="text-align: center;">
+                                        <f:facet name="header">
+                                            <h:outputText value="Periodontograma" />
+                                        </f:facet>
+                                        <p:commandButton value="Ver Periodontograma" action="#{ConsultaPaciente.verPeriodontograma(pacientes.periodontograma,pacientes.fecha)}" class="btn btn-info"></p:commandButton>
+                                    </p:column>
+
+                                    <p:column style="text-align: center;">
+                                        <f:facet name="header">
+                                            <h:outputText value="Acciones" />
+                                        </f:facet>
+                                        <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminar').show();" class="btn btn-danger"
+                                                         update=":formEliminar" >
+                                            <f:setPropertyActionListener target="#{ConsultaPaciente.consultas.id}" value="#{pacientes.id}"/>
+                                        </p:commandButton>
+                                    </p:column>
+
+                                </p:dataTable>
+
+                        </h:form>
+                        <p:dialog id="dlgE" header="Eliminar Datos" widgetVar="dlgEliminar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminar" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro?"/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{ConsultaPaciente.EliminarConsulta()}"
+                                                 update=":formMostrar:dataTable" onclick="PF('dlgEliminar').hide();" immediate="true"/>
+                                <p:commandButton value="No" onclick="PF('dlgEliminar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+
+
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

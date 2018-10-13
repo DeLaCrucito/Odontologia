@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Nuevo Usuario</title>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+        <h:outputStylesheet name="/Estilos/bootstrap/css/bootstrap.min.css"/>
+        <h:outputStylesheet name="/Estilos/dist/css/AdminLTE.css"/>
+        <h:outputStylesheet name="/Estilos/dist/css/skins/skin-blue_FDO.css"/>
+        <h:outputStylesheet name="/Estilos/font-awesome/css/font-awesome.min.css"/>
+
+        <h:outputScript name="/Estilos/js/bootstrap.min.js"/>
+        <h:outputScript name="/Estilos/js/jquery.slimscroll.min.js"/>
+        <h:outputScript name="/Estilos/js/fastclick.js"/>
+        <h:outputScript name="/Estilos/js/demo.js"/>      
+        <h:outputScript name="/Estilos/js/adminlte.min.js"/>
+        <h:outputScript name="/Estilos/dist/js/app.min.js"/>
+    </h:head>
+
+    <h:body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            <div id="top">
+                <ui:insert name="top">
+
+                    <header class="main-header">
+                        <a href="AltaLogin.xhtml" class="logo">
+                            <!-- mini logo for sidebar mini 50x50 pixels -->
+                            <span class="logo-mini"><b>F</b>O</span>
+                            <!-- logo for regular state and mobile devices -->
+                            <span class="logo-lg"><b>F de </b>O</span>
+                        </a>
+                        <!-- Header Navbar -->
+                        <nav class="navbar navbar-static-top" role="navigation">
+                            <!-- Sidebar toggle button-->
+                            
+                            <!-- Navbar Right Menu -->
+                            
+                        </nav>
+                    </header>
+                </ui:insert>
+            </div>
+
+            <div id="content" class="center_content">
+                <ui:insert name="content">Content</ui:insert>
+            </div>
+
+            <div id="bottom">
+                <ui:insert name="bottom">
+                    <footer class="main-footer-alta">
+                        <!-- To the right -->
+                        <div class="pull-right hidden-xs">
+                            Prohibida la reproducción, alteración y violación de datos.
+                        </div>
+                        <!-- Default to the left -->
+                        <strong>Copyright 2017 <a href="http://fi.uacam.mx/">Facultad Ingeniería. Universidad Autónoma de Campeche</a>.</strong> All rights reserved.
+                    </footer>
+                </ui:insert>
+            </div>
+        </div>
+    </h:body>
+
+</html>

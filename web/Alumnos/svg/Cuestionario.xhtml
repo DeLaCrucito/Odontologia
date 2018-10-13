@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <p:growl id="mensajesPaciente" autoUpdate="true" showDetail="true" life="3000"/>
+
+    <p:panel header="">
+        <h:panelGrid columns="2" cellpadding="5">
+            <h4>Responda las siguientes preguntas:</h4>
+            <h:outputText value="" />
+            <p:outputLabel for="p1" value="1.- ¿Piensa usted que sus dientes afectan su salud en general?" />
+            <p:selectOneRadio id="p1" value="#{BeanNuevoPaciente.preguntasPaciente.p1}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p2" value="2.- ¿Está usted satisfecho con el aspecto de sus dientes?" />
+            <p:selectOneRadio id="p2" value="#{BeanNuevoPaciente.preguntasPaciente.p2}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p3" value="3.- ¿Se interesa en recibir un tratamiento dental integral?" />
+            <p:selectOneRadio id="p3" value="#{BeanNuevoPaciente.preguntasPaciente.p3}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p4" value="4.- ¿Le resulta difícil mascar los alimentos?" />
+            <p:selectOneRadio id="p4" value="#{BeanNuevoPaciente.preguntasPaciente.p4}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p5" value="5.- ¿Le sangran las encías?" />
+            <p:selectOneRadio id="p5" value="#{BeanNuevoPaciente.preguntasPaciente.p5}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p6" value="6.- ¿Ha sido examinado por un médico en el último año?" />
+            <p:selectOneRadio id="p6" value="#{BeanNuevoPaciente.preguntasPaciente.p6}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p7" value="7.- ¿Está usted bajo tratamiento médico?" />
+            <p:selectOneRadio id="p7" value="#{BeanNuevoPaciente.preguntasPaciente.p7}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p8" value="8.- ¿Ha estado usted hospitalizado alguna vez?" />
+            <p:selectOneRadio id="p8" value="#{BeanNuevoPaciente.preguntasPaciente.p8}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio> 
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p9" value="9.- ¿Ha recibido transfusión de sangre alguna vez?" />
+            <p:selectOneRadio id="p9" value="#{BeanNuevoPaciente.preguntasPaciente.p9}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p10" value="10.- ¿Se siente enfermo con frecuencia?" />
+            <p:selectOneRadio id="p10" value="#{BeanNuevoPaciente.preguntasPaciente.p10}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p11" value="11.- ¿Se siente usted cansado o fatigado con frecuencia?" />
+            <p:selectOneRadio id="p11" value="#{BeanNuevoPaciente.preguntasPaciente.p11}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p12" value="12.- ¿Ha padecido alguna lesión en la cara o maxilares?" />
+            <p:selectOneRadio id="p12" value="#{BeanNuevoPaciente.preguntasPaciente.p12}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p13" value="13.- ¿Padece o padeció algún problema del corazón?" />
+            <p:selectOneRadio id="p13" value="#{BeanNuevoPaciente.preguntasPaciente.p13}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p14" value="14.- ¿Tiene usted alterada la presión arterial?" />
+            <p:selectOneRadio id="p14" value="#{BeanNuevoPaciente.preguntasPaciente.p14}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p15" value="15.- ¿Sangra mucho cuando tiene una herida?" />
+            <p:selectOneRadio id="p15" value="#{BeanNuevoPaciente.preguntasPaciente.p15}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p16" value="16.- ¿Se le hacen moretones fácilmente?" />
+            <p:selectOneRadio id="p16" value="#{BeanNuevoPaciente.preguntasPaciente.p16}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p17" value="17.- ¿Padece usted algún trastorno sanguíneo?" />
+            <p:selectOneRadio id="p17" value="#{BeanNuevoPaciente.preguntasPaciente.p17}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p18" value="18.- ¿Padece usted dolor en el pecho al hacer algún esfuerzo?" />
+            <p:selectOneRadio id="p18" value="#{BeanNuevoPaciente.preguntasPaciente.p18}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p19" value="19.- ¿Le falta la respiración cuando hace algún esfuerzo leve?" />
+            <p:selectOneRadio id="p19" value="#{BeanNuevoPaciente.preguntasPaciente.p19}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p20" value="20.- ¿Se le hinchan los tobillos?" />
+            <p:selectOneRadio id="p20" value="#{BeanNuevoPaciente.preguntasPaciente.p20}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p21" value="21.- ¿Tienes tos persistente?" />
+            <p:selectOneRadio id="p21" value="#{BeanNuevoPaciente.preguntasPaciente.p21}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p22" value="22.- ¿Alguna vez ha experimentado alguna reacción alarmante a algún anestésico dental?" />
+            <p:selectOneRadio id="p22" value="#{BeanNuevoPaciente.preguntasPaciente.p22}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p23" value="23.- ¿Orina más de seis veces al día?" />
+            <p:selectOneRadio id="p23" value="#{BeanNuevoPaciente.preguntasPaciente.p23}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p24" value="24.- ¿Padece algún problema renal?" />
+            <p:selectOneRadio id="p24" value="#{BeanNuevoPaciente.preguntasPaciente.p24}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p25" value="25.- ¿Padece o ha padecido alguna enfermedad del hígado?" />
+            <p:selectOneRadio id="p25" value="#{BeanNuevoPaciente.preguntasPaciente.p25}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p26" value="26.- ¿Padece o ha padecido alteraciones del sistema nerviso?" />
+            <p:selectOneRadio id="p26" value="#{BeanNuevoPaciente.preguntasPaciente.p26}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p27" value="27.- ¿Tiende a desmayarse con frecuencia?" />
+            <p:selectOneRadio id="p27" value="#{BeanNuevoPaciente.preguntasPaciente.p27}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p28" value="28.- ¿Padece dolores de cabeza frecuentes e intensos?" />
+            <p:selectOneRadio id="p28" value="#{BeanNuevoPaciente.preguntasPaciente.p28}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p29" value="29.- ¿Se considera una persona nerviosa?" />
+            <p:selectOneRadio id="p29" value="#{BeanNuevoPaciente.preguntasPaciente.p29}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p30" value="30.- ¿Llora usted con frecuencia?" />
+            <p:selectOneRadio id="p30" value="#{BeanNuevoPaciente.preguntasPaciente.p30}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>   
+            <p:outputLabel for="p31" value="31.- ¿Se irrita o molesta con facilidad?" />
+            <p:selectOneRadio id="p31" value="#{BeanNuevoPaciente.preguntasPaciente.p31}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p></p>
+            <h:outputText value="" />  
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <h4>Responder si el paciente es mujer (de lo contrario, seleccionar No):</h4>
+            <h:outputText value="" />
+            <p:outputLabel for="p32" value="32.- ¿Se encuentra embarazada acutalmente?" />
+            <p:selectOneRadio id="p32" value="#{BeanNuevoPaciente.preguntasPaciente.p32}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p:outputLabel for="p33" value="33.- ¿Tiene usted problemas con su periodo menstrual?" />
+            <p:selectOneRadio id="p33" value="#{BeanNuevoPaciente.preguntasPaciente.p33}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <p></p>
+            <h:outputText value="" />  
+            <h4>Seleccione si el paciente responde afirmativamente.</h4>
+            <h:outputText value="" />
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <h:outputText value="¿Padece o ha padecido alguna de las siguientes enfermedades?"/>
+            <h:outputText value=""/>
+            <p:selectManyCheckbox id="custom" value="#{BeanNuevoPaciente.selectedConsoles}" required="true" layout="responsive" columns="3">
+                <f:selectItem itemLabel="Ninguno" itemValue="Ninguno" />
+                <f:selectItem itemLabel="Hepatitis" itemValue="Hepatitis" />
+                <f:selectItem itemLabel="Ictericia" itemValue="Ictericia" />
+                <f:selectItem itemLabel="Tuberculosis" itemValue="Tuberculosis" />
+                <f:selectItem itemLabel="Enfermedades venéreas" itemValue="Enfermedades venéreas" />
+                <f:selectItem itemLabel="Infarto al miocardio" itemValue="Infarto al miocardio"/>
+                <f:selectItem itemLabel="Angina de pecho" itemValue="Angina de pecho"/>
+                <f:selectItem itemLabel="Embolia" itemValue="Embolia"/>
+                <f:selectItem itemLabel="Epilepsia" itemValue="Epilepsia"/>
+                <f:selectItem itemLabel="Diabetes" itemValue="Diabetes"/>
+                <f:selectItem itemLabel="Varicela" itemValue="Varicela"/>
+                <f:selectItem itemLabel="Fiebre reumática" itemValue="Fiebre reumática"/>
+                <f:selectItem itemLabel="Sarampión" itemValue="Sarampión"/>
+                <f:selectItem itemLabel="Asma" itemValue="Asma"/>
+                <f:selectItem itemLabel="Hipertensión arterial" itemValue="Hipertensión arterial"/>
+                <f:selectItem itemLabel="Cáncer" itemValue="Cáncer"/>
+            </p:selectManyCheckbox>
+            <h:outputText value="" />
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <h:outputText value="¿Es usted alérgico a alguno de los siguientes medicamentos?"/>
+            <h:outputText value=""/>
+            <p:selectManyCheckbox id="grid4" value="#{BeanNuevoPaciente.alergias}" required="true" layout="responsive" columns="2">
+                <f:selectItem itemLabel="Ninguno" itemValue="Ninguno" />
+                <f:selectItem itemLabel="Penicilina" itemValue="Penicilina"/>
+                <f:selectItem itemLabel="Barbituricos" itemValue="Barbituricos"/>
+                <f:selectItem itemLabel="Aspirina" itemValue="Aspirina"/>
+                <f:selectItem itemLabel="Sulfas" itemValue="Sulfas"/>
+                <f:selectItem itemLabel="Cortisona" itemValue="Cortisona"/>
+            </p:selectManyCheckbox>
+
+        </h:panelGrid>
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:spacer></p:spacer>
+            <p:spacer></p:spacer>
+            <h:outputText value="Otros"/>
+            <p:inputTextarea rows="6" cols="33" value="#{BeanNuevoPaciente.preguntasPaciente.otros}" required="true"
+                             requiredMessage="Campo otros obligatorio"/>
+        </h:panelGrid>
+
+    </p:panel>
+
+</html>

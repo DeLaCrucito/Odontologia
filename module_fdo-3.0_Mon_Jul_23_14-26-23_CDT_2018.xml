@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_fdo-3.0" default="compile.module.fdo-3.0">
+  <dirname property="module.fdo-3.0.basedir" file="${ant.file.module_fdo-3.0}"/>
+  
+  <property name="module.jdk.home.fdo-3.0" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.fdo-3.0" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.fdo-3.0" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.fdo-3.0" value="-encoding UTF-8 -source 8 -target 8 ${compiler.args}"/>
+  
+  <property name="fdo-3.0.output.dir" value="${module.fdo-3.0.basedir}/out/production/FdO-3.0"/>
+  <property name="fdo-3.0.testoutput.dir" value="${module.fdo-3.0.basedir}/out/test/FdO-3.0"/>
+  
+  <path id="fdo-3.0.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="fdo-3.0.module.production.classpath">
+    <path refid="${module.jdk.classpath.fdo-3.0}"/>
+    <path refid="library.hibernate_4.2.2-4.2.2.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_cdi:_contexts_and_dependency_injection.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_jsf.classpath"/>
+    <path refid="library.primefaces-6.1.classpath"/>
+    <path refid="library.jpa_2.0-2.0.classpath"/>
+    <path refid="library.glassfish_4.1.1.classpath"/>
+    <path refid="library.itext-2.1.0.classpath"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  <path id="fdo-3.0.runtime.production.module.classpath">
+    <pathelement location="${fdo-3.0.output.dir}"/>
+    <path refid="library.hibernate_4.2.2-4.2.2.classpath"/>
+    <path refid="library.primefaces-6.1.classpath"/>
+    <path refid="library.jpa_2.0-2.0.classpath"/>
+    <path refid="library.itext-2.1.0.classpath"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+  </path>
+  
+  <path id="fdo-3.0.module.classpath">
+    <path refid="${module.jdk.classpath.fdo-3.0}"/>
+    <pathelement location="${fdo-3.0.output.dir}"/>
+    <path refid="library.hibernate_4.2.2-4.2.2.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_cdi:_contexts_and_dependency_injection.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_jsf.classpath"/>
+    <path refid="library.primefaces-6.1.classpath"/>
+    <path refid="library.jpa_2.0-2.0.classpath"/>
+    <path refid="library.glassfish_4.1.1.classpath"/>
+    <path refid="library.itext-2.1.0.classpath"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.commons-logging-1.1.classpath"/>
+    <path refid="library.commons-collections-3.2.1.classpath"/>
+  </path>
+  
+  <path id="fdo-3.0.runtime.module.classpath">
+    <pathelement location="${fdo-3.0.testoutput.dir}"/>
+    <pathelement location="${fdo-3.0.output.dir}"/>
+    <path refid="library.hibernate_4.2.2-4.2.2.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_cdi:_contexts_and_dependency_injection.classpath"/>
+    <path refid="library.glassfish_4.1.1_-_jsf.classpath"/>
+    <path refid="library.primefaces-6.1.classpath"/>
+    <path refid="library.jpa_2.0-2.0.classpath"/>
+    <path refid="library.glassfish_4.1.1.classpath"/>
+    <path refid="library.itext-2.1.0.classpath"/>
+    <path refid="library.java_ee_6-java_ee_6.classpath"/>
+    <path refid="library.commons-logging-1.1.classpath"/>
+    <path refid="library.commons-collections-3.2.1.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.fdo-3.0">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.fdo-3.0">
+    <patternset refid="excluded.from.module.fdo-3.0"/>
+  </patternset>
+  
+  <path id="fdo-3.0.module.sourcepath">
+    <dirset dir="${module.fdo-3.0.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.fdo-3.0" depends="compile.module.fdo-3.0.production,compile.module.fdo-3.0.tests" description="Compile module FdO-3.0"/>
+  
+  <target name="compile.module.fdo-3.0.production" depends="register.custom.compilers" description="Compile module FdO-3.0; production classes">
+    <mkdir dir="${fdo-3.0.output.dir}"/>
+    <javac2 destdir="${fdo-3.0.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.fdo-3.0}/javac">
+      <compilerarg line="${compiler.args.fdo-3.0}"/>
+      <bootclasspath refid="fdo-3.0.module.bootclasspath"/>
+      <classpath refid="fdo-3.0.module.production.classpath"/>
+      <src refid="fdo-3.0.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.fdo-3.0"/>
+    </javac2>
+    
+    <copy todir="${fdo-3.0.output.dir}">
+      <fileset dir="${module.fdo-3.0.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.fdo-3.0.tests" depends="register.custom.compilers,compile.module.fdo-3.0.production" description="compile module FdO-3.0; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.fdo-3.0" description="cleanup module">
+    <delete dir="${fdo-3.0.output.dir}"/>
+    <delete dir="${fdo-3.0.testoutput.dir}"/>
+  </target>
+</project>

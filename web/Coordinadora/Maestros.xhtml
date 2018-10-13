@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<xhtml xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:p="http://primefaces.org/ui"
+       xmlns:h="http://xmlns.jcp.org/jsf/html"
+       xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaCoordinacion.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+                    <!-- Main content -->
+                    <section class="content">
+                        <h1>
+                            Maestros
+                            <small>Coordinación</small>
+                        </h1>
+
+                        <p:separator/>
+                        <h:form id="mostrarMaMateria">
+                            <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+                            <p:commandButton value="Nuevo Maestro" actionListener="#{beanMaestro.prepararNuevoMaestro(actionEvent)}" oncomplete="PF('dlgNuevo').show();" 
+                                             update=":formInsertar" style="font-size: 12px;" />
+                            <p:commandButton value="Asignar Materia" actionListener="#{beanMaestroMaterias.prepararNuevoMaestroM(actionEvent)}" oncomplete="PF('dlgMateria').show();" 
+                                             update=":formMateria" style="font-size: 12px;" />
+                            <p:commandButton id="mostrarMM" value="Ver materias asignadas" type="button"  style="font-size: 12px;"/>
+
+                            <p:overlayPanel id="panelMaestrosM" for="mostrarMM" hideEffect="fade" dynamic="true" style="width: 600px">
+                                <p:dataTable id="tablaMostrarMaestrosMaterias" var="master" value="#{beanMaestroMaterias.maestroM}" rows="4"
+                                             emptyMessage="No hay datos" style="font-size: 11px;" paginator="true">
+
+
+                                    <p:column headerText="Nombre Maestro ">
+                                        <h:outputText value="#{master.maestro.nombre} #{master.maestro.apellidoPaterno} #{master.maestro.apellidoMaterno}"/>
+                                    </p:column>
+                                    <p:column headerText="Materia">
+                                        <h:outputText value="#{master.materias.materia}"/>
+                                    </p:column>
+                                    <p:column headerText="Grupo">
+                                        <h:outputText value="#{master.grupo}"/>
+                                    </p:column>
+                                    <p:column headerText="Grado">
+                                        <h:outputText value="#{master.año}"/>
+                                    </p:column>
+                                    <p:column headerText="Clave">
+                                        <h:outputText value="#{master.clave}"/>
+                                    </p:column>
+                                    <p:column headerText="Elminar materia a docente">
+                                        <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminarMateria').show();" class="btn btn-danger"
+                                                         >
+                                            <f:setPropertyActionListener target="#{beanMaestro.maestroMaterias}" value="#{master}"/>
+                                        </p:commandButton>                                    
+                                    </p:column>
+
+
+                                </p:dataTable>
+                            </p:overlayPanel>
+
+                        </h:form>
+
+                        <br/>
+                        <p:dialog id="dlgNuevoMaestro" header="Nuevo Docente" widgetVar="dlgNuevo" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formInsertar">
+                                <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="Número de empleado: "/>
+                                    <p:inputText value="#{beanMaestro.maestro.idEmpleado}"
+                                                 required="true" requiredMessage="Nº de empleado es obligatorio"/>
+                                    <p:spacer/><p:spacer/>
+                                    <p:outputLabel value="Nombre:"/>
+                                    <p:inputText value="#{beanMaestro.maestro.nombre}"
+                                                 required="true" requiredMessage="Nombre es obligatorio"/>
+                                    <p:spacer/><p:spacer/>
+                                    <p:outputLabel value="Apellido Paterno"/>
+                                    <p:inputText value="#{beanMaestro.maestro.apellidoPaterno}"
+                                                 required="true" requiredMessage="Apellido es obligatorio"/>
+                                    <p:spacer/><p:spacer/>
+                                    <p:outputLabel value="Apellido Materno"/>
+                                    <p:inputText value="#{beanMaestro.maestro.apellidoMaterno}"/>
+                                    <p:spacer/><p:spacer/>
+                                    <p:outputLabel value="Correo"/>
+                                    <p:inputText id="focus" title="El correo debe ser el institucional" value="#{beanMaestro.maestro.correo}"
+                                                 required="true" requiredMessage="Correo es obligatorio" validatorMessage="Email invalido, Ingrese su correo institucional">
+                                        <f:validateRegex
+                                            pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[uacam]+(\.[uacam]{5}+)*(\.[mx]{2,})$"/>
+                                    </p:inputText>
+                                    <p:spacer/><p:spacer/>
+                                    <p:spacer/><p:spacer/>
+                                    <p:commandButton value="Guardar" actionListener="#{beanMaestro.insertarMaestro()}"  
+                                                     oncomplete="PF('dlgNuevo').hide();" update=":formMostrarMaestros:tablaMostrarMaestros :formInsertar :formMateria"/>
+                                    <p:commandButton value="Cancelar" action="#{beanMaestro.cancelar()}"
+                                                     update=":formInsertar" immediate="true" 
+                                                     onclick="PF('dlgNuevo').hide();" /> 
+
+                                    <p:tooltip id="focusEmail" for="focus" showEvent="focus" hideEvent="blur"/>
+                                </h:panelGrid>
+                            </h:form>
+                        </p:dialog>
+
+                        <h:form id="formMostrarMaestros">
+                            <p:dataTable id="tablaMostrarMaestros" var="master" value="#{beanMaestro.listar}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+
+                                <p:column headerText="Id Maestro ">
+                                    <h:outputText value="#{master.idEmpleado}"/>
+                                </p:column>
+                                <p:column headerText="Nombre Maestro ">
+                                    <h:outputText value="#{master.nombre} #{master.apellidoPaterno} #{master.apellidoMaterno}"/>
+                                </p:column>
+                                <p:column headerText="Correo ">
+                                    <h:outputText value="#{master.correo}"/>
+                                </p:column>
+                                <p:column headerText="Editar - Eliminar">
+                                    <p:commandButton value="Modificar" oncomplete="PF('dlgEditar').show();" class="btn btn-info"
+                                                     update=":formActualizar :formMateria ">
+                                        <f:setPropertyActionListener target="#{beanMaestro.maestro}" value="#{master}"/>
+                                    </p:commandButton>
+
+
+                                    <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminar').show();" class="btn btn-danger"
+                                                     update=":formEliminarMateria" >
+                                        <f:setPropertyActionListener target="#{beanMaestro.maestro}" value="#{master}"/>
+                                    </p:commandButton>
+                                </p:column>
+
+
+                            </p:dataTable>
+                        </h:form>
+
+                        <p:dialog id="dlgActulizarMaestro" header="Editar Registro" widgetVar="dlgEditar" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formActualizar">
+                                <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="ID de empleado:"/>
+                                    <p:inputText value="#{beanMaestro.maestro.idEmpleado}"
+                                                 disabled="true" required="true" requiredMessage="El ID es obligatorio"/>
+
+                                    <p:outputLabel value="Nombre:"/>
+                                    <p:inputText value="#{beanMaestro.maestro.nombre}"
+                                                 required="true" requiredMessage="Nombre es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Paterno"/>
+                                    <p:inputText value="#{beanMaestro.maestro.apellidoPaterno}"
+                                                 required="true" requiredMessage="Apellido es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Materno"/>
+                                    <p:inputText value="#{beanMaestro.maestro.apellidoMaterno}"/>
+
+                                    <p:outputLabel value="Correo"/>
+                                    <p:inputText value="#{beanMaestro.maestro.correo}"
+                                                 required="true" requiredMessage="Correo es obligatorio" validatorMessage="Email invalido, Ingrese su correo institucional">
+                                        <f:validateRegex
+                                            pattern="^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[uacam]+(\.[uacam]+)*(\.[mx]{2,})$"/>
+                                    </p:inputText>  
+
+                                    <p:commandButton value="Guardar Cambios" actionListener="#{beanMaestro.actualizarMaestro()}" 
+                                                     oncomplete="PF('dlgEditar').hide();" update=":formMostrarMaestros:tablaMostrarMaestros :formMateria :mostrarMaMateria:tablaMostrarMaestrosMaterias"/>
+                                    <p:commandButton value="Cancelar" onclick="PF('dlgEditar').hide();" 
+                                                     immediate="true" />
+
+                                </h:panelGrid>
+                            </h:form>
+
+                        </p:dialog>
+
+                        <p:dialog id="dlgE" header="Eliminar Datos" widgetVar="dlgEliminar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminar" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro? 
+                                              ***NOTA: SI ELIMINA A ESTE MAESTRO ELIMINARÁ LAS MATERIAS ASIGNADAS A ÉL INCLUYENDO INFORMACIÓN PERSONAL Y DE ACCESO AL PORTAL***"/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{beanMaestro.eliminarMaestro()}"
+                                                 update=":formMostrarMaestros :formMateria" onclick="PF('dlgEliminar').hide();" immediate="true"/>
+                                <p:commandButton value="No" onclick="PF('dlgEliminar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+
+                        <p:dialog id="dlgE2" header="Eliminar materia asignada al docente" widgetVar="dlgEliminarMateria" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminarMateria" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro? 
+                                              NOTA: Solo eliminará la materia que tenga asignada en éste momento. No eliminará ningún dato del docente
+                                              que se encuentre en la base de datos."/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{beanMaestro.eliminarMateriaMaestro()}" 
+                                                 update=":mostrarMaMateria :formMateria" onclick="PF('dlgEliminarMateria').hide();" immediate="true"/>
+                                <p:commandButton value="No" onclick="PF('dlgEliminarMateria').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+                        <p:dialog id="dlgMaestroMateria" header="Asignar Materia" widgetVar="dlgMateria" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formMateria">
+                                <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="Maestro"/>
+                                    <p:selectOneMenu id="maestro" value="#{beanMaestro.maestroMaterias.maestro.idEmpleado}"
+                                                     required="true" requiredMessage="Seleccione un grado">
+                                        <f:selectItem itemLabel="---Seleccione---"/>
+                                        <f:selectItems value="#{beanMaestro.listMaestro}"/>
+                                        <f:ajax execute="maestro"/>
+                                    </p:selectOneMenu>
+
+                                    <p:outputLabel value="Semestre"/>
+                                    <p:selectOneMenu id="grupo" value="#{beanMaestro.maestroMaterias.grupo}"
+                                                     required="true" requiredMessage="Seleccione el grado">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="1" itemValue="1"/>
+                                        <f:selectItem itemLabel="2" itemValue="2"/>
+                                        <f:selectItem itemLabel="3" itemValue="3"/>
+                                        <f:selectItem itemLabel="4" itemValue="4"/>
+                                        <f:selectItem itemLabel="5" itemValue="5"/>
+                                        <f:selectItem itemLabel="6" itemValue="6"/>
+                                        <f:selectItem itemLabel="7" itemValue="7"/>
+                                        <f:selectItem itemLabel="8" itemValue="8"/>
+                                        <f:ajax execute="grupo" render="materia"/>
+                                    </p:selectOneMenu>
+
+
+                                    <p:outputLabel value="Materia"/>
+                                    <p:selectOneMenu id="materia" value="#{beanMaestro.maestroMaterias.materias.idMateria}"
+                                                     required="true" requiredMessage="Seleccione una Materia">
+                                        <f:selectItem itemLabel="---Seleccione---"/>
+                                        <f:selectItems value="#{beanMaestro.listarMaterias}"/>
+                                    </p:selectOneMenu>
+
+
+                                    <p:outputLabel value="Grupo"/>
+                                    <p:selectOneMenu id="grado" value="#{beanMaestro.maestroMaterias.año}"
+                                                     required="true" requiredMessage="Seleccione el grado">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="A" itemValue="A"/>
+                                        <f:selectItem itemLabel="B" itemValue="B"/>
+                                        <f:selectItem itemLabel="C" itemValue="C"/>
+
+                                        <f:ajax execute="grado" />
+                                    </p:selectOneMenu>
+
+
+
+                                    <p:commandButton value="Guardar" actionListener="#{beanMaestro.insertarMaestroMaterias()}" 
+                                                     oncomplete="PF('dlgMateria').hide();" update=":formMateria :mostrarMaMateria:tablaMostrarMaestrosMaterias"/>
+                                    <p:commandButton value="Cancelar" onclick="PF('dlgMateria').hide();" 
+                                                     immediate="true" />
+
+                                </h:panelGrid>
+                            </h:form>
+
+                        </p:dialog>
+
+
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</xhtml>

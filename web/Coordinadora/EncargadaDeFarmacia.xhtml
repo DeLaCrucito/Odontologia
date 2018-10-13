@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaCoordinacion.xhtml">
+
+            <ui:define name="content">
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <h1>
+                            Encargada de Farmacia
+                            <small>Coordinación</small>
+                        </h1>
+
+                        <p:separator/>
+
+
+                        <h:form id="formInsertarEnc">
+                            <p:commandButton value="Nuevo Encargado de Farmacia" oncomplete="PF('dlgNuevo').show();" 
+                                             update=":formInsertar" style="font-size: 12px;" />
+                        </h:form>
+
+                        <p:dialog id="dlgNuevoMaestro" header="Nuevo Registro" widgetVar="dlgNuevo" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formInsertar">
+                                <p:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="ID del empleado:"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.idEmpleado}"
+                                                 required="true" requiredMessage="El ID es obligatorio"/>
+
+                                    <p:outputLabel value="Nombre:"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.nombre}"
+                                                 required="true" requiredMessage="Nombre es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Paterno"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.apellidoPaterno}"
+                                                 required="true" requiredMessage="Apellido es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Materno"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.apellidoMaterno}"/>
+
+                                    <p:outputLabel value="Clinica"/>
+                                    <p:selectOneMenu id="clinica" value="#{beanEncargadaClinica.encargada.clinica}"
+                                                     required="true" requiredMessage="Seleccione la clinica">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="Clinica 1" itemValue="Clinica 1"/>
+                                        <f:selectItem itemLabel="Clinica 2" itemValue="Clinica 2"/>
+                                        <f:selectItem itemLabel="Clinica 3" itemValue="Clinica 3"/>
+
+                                        <f:ajax execute="clinica" />
+                                    </p:selectOneMenu>
+
+                                    <p:outputLabel value="Turno"/>
+                                    <p:selectOneMenu id="turno" value="#{beanEncargadaClinica.encargada.turno}"
+                                                     required="true" requiredMessage="Seleccione el turno">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="Matutino" itemValue="Matutino"/>
+                                        <f:selectItem itemLabel="Verpertino" itemValue="Vespertino"/>
+
+
+                                        <f:ajax execute="turno" />
+                                    </p:selectOneMenu>
+
+
+                                    <p:commandButton value="Guardar" actionListener="#{beanEncargadaClinica.insertarEncargadaClinica()}"  
+                                                     oncomplete="PF('dlgNuevo').hide();" update=":formInsertar :formMostrarEncargada:tablaMostrarEncargada" />
+                                    <p:commandButton value="Cancelar"
+                                                     update=":formInsertar" immediate="true" 
+                                                     onclick="PF('dlgNuevo').hide();" />
+
+                                </p:panelGrid>
+                            </h:form>
+                        </p:dialog>
+
+                        <br/>
+                        <h:form id="formMostrarEncargada">
+                            <p:dataTable id="tablaMostrarEncargada" var="master" value="#{beanEncargadaClinica.verEncargada}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+
+                                <p:column headerText="Id  ">
+                                    <h:outputText value="#{master.idEmpleado}"/>
+                                </p:column>
+                                <p:column headerText="Nombre  ">
+                                    <h:outputText value="#{master.nombre} #{master.apellidoPaterno} #{master.apellidoMaterno}"/>
+                                </p:column>
+                                <p:column headerText="Clinica ">
+                                    <h:outputText value="#{master.clinica}"/>
+                                </p:column>
+
+                                <p:column headerText="Turno ">
+                                    <h:outputText value="#{master.turno}"/>
+                                </p:column>
+                                <p:column headerText="Editar - Eliminar">
+                                    <p:commandButton value="Modificar" oncomplete="PF('dlgActualizar').show();" class="btn btn-info"
+                                                     update=":formActualizar ">
+                                        <f:setPropertyActionListener target="#{beanEncargadaClinica.encargada}" value="#{master}"/>
+                                    </p:commandButton>
+                                    <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminar').show();" class="btn btn-danger"
+                                                     update=":formEliminar" >
+                                        <f:setPropertyActionListener target="#{beanEncargadaClinica.encargada}" value="#{master}"/>
+                                    </p:commandButton>
+                                </p:column>
+
+
+                            </p:dataTable>
+                        </h:form>
+
+                        <p:dialog id="dlgActualizarEncargada" header="Actualizar Registro" widgetVar="dlgActualizar" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formActualizar">
+                                <p:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="Matriculaa:"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.idEmpleado}"
+                                                 disabled="true" required="true" requiredMessage="Matricula es obligatorio"/>
+
+                                    <p:outputLabel value="Nombre:"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.nombre}"
+                                                 required="true" requiredMessage="Nombre es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Paterno"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.apellidoPaterno}"
+                                                 required="true" requiredMessage="Apellido es obligatorio"/>
+
+                                    <p:outputLabel value="Apellido Materno"/>
+                                    <p:inputText value="#{beanEncargadaClinica.encargada.apellidoMaterno}"/>
+
+                                    <p:outputLabel value="Clinica"/>
+                                    <p:selectOneMenu id="clinica" value="#{beanEncargadaClinica.encargada.clinica}"
+                                                     required="true" requiredMessage="Seleccione la clinica">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="Clinica 1" itemValue="Clinica 1"/>
+                                        <f:selectItem itemLabel="Clinica 2" itemValue="Clinica 2"/>
+                                        <f:selectItem itemLabel="Clinica 3" itemValue="Clinica 3"/>
+
+                                        <f:ajax execute="clinica" />
+                                    </p:selectOneMenu>
+
+                                    <p:outputLabel value="Turno"/>
+                                    <p:selectOneMenu id="turno" value="#{beanEncargadaClinica.encargada.turno}"
+                                                     required="true" requiredMessage="Seleccione el turno">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="Matutino" itemValue="Matutino"/>
+                                        <f:selectItem itemLabel="Verpertino" itemValue="Vespertino"/>
+
+
+                                        <f:ajax execute="turno" />
+                                    </p:selectOneMenu>
+
+
+                                    <p:commandButton value="Guardar" actionListener="#{beanEncargadaClinica.actualizarEncargada()}"  
+                                                     oncomplete="PF('dlgActualizar').hide();" update=":formActualizar :formMostrarEncargada:tablaMostrarEncargada" />
+                                    <p:commandButton value="Cancelar"
+                                                     update=":formActualizar" immediate="true" 
+                                                     onclick="PF('dlgNuevo').hide();" />
+
+                                </p:panelGrid>
+                            </h:form>
+                        </p:dialog>
+
+                        <p:dialog id="dlgE" header="Eliminar Datos" widgetVar="dlgEliminar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminar" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro?"/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{beanEncargadaClinica.eliminarEncargada()}"
+                                                 update=":formMostrarEncargada " onclick="PF('dlgEliminar').hide();" immediate="true"/>
+                                <p:commandButton value="No" onclick="PF('dlgEliminar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

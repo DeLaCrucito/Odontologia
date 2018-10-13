@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+            <ui:define name="content">
+                <div class="content-wrapper">
+                    <!-- Main content -->
+                    <style>
+                        .oculto{
+                            display: none;
+                        }
+                        .ocultos{
+                            display: none;
+                        }
+                    </style>
+                    <script>
+                        function MostrarTodo() {
+                            $( ".oculto" ).css( "display", "block" );
+                            $( ".ocultos" ).css( "display", "none" );
+                            buscafol();
+                        }
+                        function MostrarTodos() {
+                            $( ".ocultos" ).css( "display", "block" );
+                            $( ".oculto" ).css( "display", "none" );
+                            buscapa();
+                        }
+                    </script>
+                    <section class="content">
+
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+                        <h:form>
+                            <p:remoteCommand name="buscafol" action="#{ConsultaPaciente.BucaF()}" process="@this"/>
+                            <p:remoteCommand name="buscapa" action="#{ConsultaPaciente.BuscaP()}" process="@this"/>
+                            <h:panelGrid columns="3" cellpadding="5">
+
+                            </h:panelGrid>
+                        </h:form>
+                        <p:panel id="panelPaciente" header="Paciente" style="margin-bottom:5px; font-size: 11px;" >
+                            <h:form>
+                                <h:panelGrid columns="3" cellpadding="5">
+                                    <p:outputLabel value="Buscar por: "/>
+                                    <p:commandButton type="button" style="display:  block" class="ver" value="Folio" onclick="MostrarTodo(); return false;" />
+                                    <p:commandButton type="button" style="display: block" class="vers" value="Paciente" onclick="MostrarTodos(); return false;" />
+                                </h:panelGrid>
+
+                            </h:form>
+                            <p:spacer/>
+                            <h:panelGrid columns="3" cellpadding="10" >
+
+                                <h:form id="formBusquedaPacienteFolio" class="oculto">
+
+
+                                    <p:outputLabel value="Folio  "/><p:spacer width="10" height="10"/>
+                                    <p:inputText id="folio" value="#{ConsultaPaciente.paciente.folio}"
+                                                 required="true" requ
+                                                 iredMessage="Ingrese el folio">
+                                    <p:ajax event="keyup" listener="#{ConsultaPaciente.folioPaciente()}"  update=":formMostrar:dataTable"></p:ajax>
+                                    </p:inputText>
+
+                                    <p:spacer width="10" height="10"/>
+
+                                    <p:commandButton actionListener="#{ConsultaPaciente.folioPaciente()}" class="btn btn-info" value="Mostrar" update=":formMostrar:dataTable"/>
+                                </h:form>
+
+                                <h:form id="formBusquedaPacienteNombre" class="ocultos">
+                                    <p:outputLabel value="Nombre completo(Apellidos y nombres)  "/><p:spacer width="10" height="10"/>
+                                    <p:inputText id="nombre" value="#{ConsultaPaciente.paciente.nombre}"
+                                                 required="true" requiredMessage="Ingrese el nombre">
+                                          <p:ajax event="keyup" listener="#{ConsultaPaciente.nombresPaciente()}"  update=":formMostrar:dataTable"></p:ajax>
+
+                                    </p:inputText>
+
+                                    <p:spacer width="10" height="10"/>
+
+                                    <p:commandButton actionListener="#{ConsultaPaciente.nombresPaciente()}" class="btn btn-info" value="Mostrar" update=":formMostrar:dataTable"/>
+                                </h:form>
+
+
+                            </h:panelGrid>
+                        </p:panel>
+
+                        <h:form id="formMostrar">
+                            <p:dataTable id="dataTable" var="master" value="#{ConsultaPaciente.listPaciente}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+
+                                <p:column headerText="Folio">
+                                    <h:outputText id="idFolio" value="#{master.folio}"/>
+                                </p:column>
+
+                                <p:column headerText="Nombre">
+                                    <h:outputText value="#{master.nombre}"/>
+                                </p:column>
+
+                                <p:column headerText="Fecha de nacimiento">
+                                    <h:outputText value="#{master.fechaNacim}"/>
+                                </p:column>
+
+                                <p:column headerText="Sexo">
+                                    <h:outputText value="#{master.sexo}"/>
+                                </p:column>
+
+                                <p:column headerText="Estado civil">
+                                    <h:outputText value="#{master.estadoCivil}"/>
+                                </p:column>
+
+                                <p:column headerText="Nivel de estudios">
+                                    <h:outputText value="#{master.nivelEstudios}"/>
+                                </p:column>
+
+                                <p:column headerText="Fecha de registro">
+                                    <h:outputText value="#{master.fechaRegistro}"/>
+                                </p:column>
+
+                                <p:column headerText="Consulta">
+                                    <p:commandButton value="Nueva consulta" action="#{ConsultaPaciente.nuevaConsulta(master.id,master.folio,master.nombre)}" class="btn btn-info"></p:commandButton>
+                                </p:column>
+                                
+                                <p:column headerText="Expediente">
+                                    <p:commandButton value="Ver historial" action="#{ConsultaPaciente.verHistorial(master.id,master.nombre,master.folio)}" class="btn btn-info"></p:commandButton>
+                                </p:column>
+
+                                <p:column style="text-align: center;">
+                                    <f:facet name="header">
+                                        <h:outputText value="Acciones" />
+                                    </f:facet>
+                                    <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminar').show();" class="btn btn-danger"
+                                                     update=":formEliminar" >
+                                        <f:setPropertyActionListener target="#{ConsultaPaciente.paciente.id}" value="#{master.id}"/>
+                                    </p:commandButton>
+                                </p:column>
+                            </p:dataTable>
+                        </h:form>
+
+
+                        <p:dialog id="dlgE" header="Eliminar Datos" widgetVar="dlgEliminar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminar" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro?"/> <br/><br/>
+                                <p:commandButton value="Si" update=":formMostrar:dataTable" actionListener="#{ConsultaPaciente.EliminarPaciente()}"
+                                                  onclick="PF('dlgEliminar').hide();" immediate="true"/>
+
+                                <p:commandButton value="No" onclick="PF('dlgEliminar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+                    </section>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

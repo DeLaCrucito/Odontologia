@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+                        <h:form>
+
+                            <p:growl id="growl" sticky="true" showDetail="true"/>
+
+                            <p:wizard>
+
+                                <p:tab id="Datos_Paciente" title="Datos Personales">
+                                 <ui:include src="svg/Paciente.xhtml" />
+                                    <p:spacer/>
+                                    <p:spacer/>
+                                </p:tab>
+
+                                <p:tab id="Cuestionario" title="Cuestionario">
+                                    
+                                 <ui:include src="svg/Cuestionario.xhtml"/>
+                                    <p:spacer/>
+                                </p:tab>
+
+                                <p:tab id="Examen_Orofacial" title="Examen Orofacial">
+                                    <ui:include src="svg/ExaOrofacial.xhtml"/>
+                                    <p:spacer/>
+                                </p:tab>
+
+                                <p:tab id="odonto" title="Control de placa">
+                                    <ui:include src="svg/ControlPlaca.xhtml"/>
+                                </p:tab>
+
+                                <p:tab id="periodonto" title="Periodontograma">
+                                    <ui:include src="svg/Periodontograma.xhtml"/>
+                                    <p:spacer/><p:spacer/><p:panelGrid class="panelGridCenter">
+                                        <h:panelGrid class="panelGridCenter">
+                                            <p:commandButton value="Agregar nuevo paciente al sistema" actionListener="#{BeanNuevoPaciente.guardar()}" update="growl" process="@this"/>
+                                        </h:panelGrid>
+                                    </p:panelGrid><p:spacer/><p:spacer/>
+                                </p:tab>
+
+                                <p:tab id="consentimiento" title="Consentimiento">
+                                    <ui:include src="svg/consentimiento.xhtml"/>
+                                    <p:spacer/><p:spacer/>
+                                </p:tab>
+
+                            </p:wizard>
+
+                        </h:form>
+
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

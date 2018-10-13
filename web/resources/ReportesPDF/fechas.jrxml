@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2018-02-08T11:41:06 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3cdaf685-d919-46eb-b475-0854de1b1a23">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="NEW_DATAADAPTER1.xml"/>
+	<parameter name="fecha1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select sum(cantidad) as cantidad, T3.tratamiento,name_tratamiento from menu_tratamientos T1 inner join bitacora_recibos T2 inner join area_tratamientos T3 where T1.contador=T2.tratamiento and T3.area=T1.area_tratamiento and T2.fecha between $P{fecha1} and $P{fecha2} group by T1.contador, T1.name_tratamiento asc order by area_tratamiento  , name_tratamiento]]>
+	</queryString>
+	<field name="cantidad" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name_tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="99" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="28" width="400" height="28" uuid="f61883f3-7ae3-409e-ad96-b4a12134dd37"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facultad de Odontología.]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="474" y="0" width="82" height="79" uuid="3827b34f-98f4-43d0-bd0b-d9bc7458e789"/>
+				<imageExpression><![CDATA["C:\\FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="74" y="59" width="400" height="20" uuid="9e2a0fd6-04ee-401d-bba4-7eb5fcc815af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte General]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="79" width="553" height="20" uuid="cf13e4d0-91da-4898-8c84-88aec9155754"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Correspondiente a las fechas: "+$P{fecha1}+" y "+$P{fecha2}+" de todas las clínicas."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="74" y="0" width="400" height="28" uuid="0dc95db0-7659-489d-b646-eabd0e2a41c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidad Autónoma de Campeche.]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="1" y="0" width="73" height="79" uuid="73309566-e617-45c8-ab91-b210ee53b4b0"/>
+				<imageExpression><![CDATA["C:\\logo-uac-avanza-255x300.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnFooter>
+		<band height="653">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="2" y="0" width="553" height="653" uuid="bd9ca873-a436-49b2-ae3a-e78ed1fbc362"/>
+				<imageExpression><![CDATA["C:\\FONDO_PAGG_FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<pie3DChart>
+				<chart>
+					<reportElement x="2" y="0" width="554" height="328" uuid="5952b862-a6c4-4157-992e-863888ea93fd"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{name_tratamiento}]]></keyExpression>
+					<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<bar3DChart>
+				<chart>
+					<reportElement x="2" y="345" width="553" height="308" uuid="37307402-23b7-48f3-b2a8-0e7ad58a0da5"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Tratamientos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{name_tratamiento}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot orientation="Horizontal"/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="50">
+			<staticText>
+				<reportElement x="0" y="30" width="124" height="20" uuid="0155f8d4-2f29-4047-b963-5bfccfdb2753"/>
+				<text><![CDATA[Facultad de Odontología]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="436" y="30" width="80" height="20" uuid="10c8f30d-c106-4c29-b614-00e448fc1194"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="516" y="30" width="40" height="20" uuid="c6f75dcb-467c-48b9-a356-2b6e0aa168c7"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="341" y="30" width="88" height="20" uuid="6cb29946-c739-40e0-851e-32effe6fe285"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="311" y="30" width="30" height="20" uuid="a02dd92d-35fc-4095-90ff-453d52ef2ad7"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[ a las]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="231" y="30" width="80" height="20" uuid="1cf7889f-e7f7-4e35-8288-d1de9ba6e87f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="161" y="30" width="70" height="20" uuid="7d7ecada-1215-45ad-a8ca-0bda088f9f67"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Impreso el dia ]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<noData>
+		<band height="801">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="99" width="556" height="702" uuid="e38a96fa-22aa-4bf9-92c5-387722b2d41d"/>
+				<imageExpression><![CDATA["C:\\FONDO_PAGG_FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="473" y="0" width="82" height="79" uuid="5d135ed7-e2c6-4198-9599-278f2064cbfc"/>
+				<imageExpression><![CDATA["C:\\FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="73" height="79" uuid="e1c325d0-9650-4abb-8d45-324cf08a9521"/>
+				<imageExpression><![CDATA["C:\\logo-uac-avanza-255x300.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="73" y="0" width="400" height="28" uuid="4d5e718f-dba9-4e1d-b7c1-745b25d6c4de"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidad Autónoma de Campeche.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="28" width="400" height="28" uuid="88ae1d4d-9d11-484a-93fc-d951105cacaa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facultad de Odontología.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-5" y="397" width="555" height="107" uuid="54d31fa2-6025-446d-86d5-d39dcaf77acb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lo sentimos, por el momento no se encuentra nigún dato registrado para la información que desea filtrar.]]></text>
+			</staticText>
+			<textField pattern="HH:mm">
+				<reportElement x="341" y="780" width="88" height="20" uuid="d7062082-ba76-436e-9065-083bf249ea16"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="311" y="780" width="30" height="20" uuid="15aafe49-d6a9-4c68-8061-78fde1c8e275"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[ a las]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="231" y="780" width="80" height="20" uuid="5b442716-9d4d-4872-8122-53c6cac1402f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="161" y="780" width="70" height="20" uuid="c533cf6c-1ca8-47aa-9d46-d80867657c4e"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Impreso el dia ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="780" width="124" height="20" uuid="323a478e-8a2a-4276-9bab-3b812b867eec"/>
+				<text><![CDATA[Facultad de Odontología]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="59" width="400" height="20" uuid="1eef972c-ed26-46ab-88cd-194815dc9cdd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="15" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte General]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="2" y="79" width="553" height="20" uuid="93dfdaab-9bca-4e4e-a5c3-b7c94151fbd3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Correspondiente a las fechas: "+$P{fecha1}+" y "+$P{fecha2}+" de todas las clínicas."]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

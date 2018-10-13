@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.DireccionPaciente" table="direccion_paciente" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="pais" type="string">
+            <column name="pais" not-null="true" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" not-null="true" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="ciudad" not-null="true" />
+        </property>
+        <property name="calle" type="string">
+            <column name="calle" not-null="true" />
+        </property>
+        <property name="colonia" type="string">
+            <column name="colonia" not-null="true" />
+        </property>
+        <set name="pacientes" table="paciente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="domicilio" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.Paciente" />
+        </set>
+    </class>
+</hibernate-mapping>

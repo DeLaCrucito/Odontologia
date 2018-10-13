@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+
+   <p:panelGrid layout="grid"  columns="2">
+        <p:panelGrid layout="grid" columns="2">
+            <p:outputLabel for="crepitacion" value="Crepitación y/o crujido" />
+            <p:selectOneRadio id="crepitacion" value="#{BeanNuevoPaciente.atm.crepitacion}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:outputLabel for="sensibilidad" value="Sensibilidad del área" />
+            <p:selectOneRadio id="sensibilidad" value="#{BeanNuevoPaciente.atm.sensibilidad}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:outputLabel for="dolor" value="Dolor" />
+            <p:selectOneRadio id="dolor" value="#{BeanNuevoPaciente.atm.dolor}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:outputLabel for="subluxacion" value="Subluxación" />
+            <p:selectOneRadio id="subluxacion" value="#{BeanNuevoPaciente.atm.subluxacion}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+        </p:panelGrid>
+        <p:panelGrid layout="grid" columns="2" >
+            <p:outputLabel value="Desviación:"/>
+            <p:selectOneRadio id="desviacion" value="#{BeanNuevoPaciente.atm.desviacion}">
+                <f:selectItem itemLabel="Si" itemValue="Si" />
+                <f:selectItem itemLabel="No" itemValue="No" />
+            </p:selectOneRadio>
+            <p:outputLabel for="cierre" value="Al cierre"/>
+            <p:inputText id="cierre" value="#{BeanNuevoPaciente.atm.desviacionCierre}" />
+            <p:outputLabel for="apertura" value="A la apertura"/>
+            <p:inputText id="apertura" value="#{BeanNuevoPaciente.atm.desviacionApertura}"/>
+        </p:panelGrid> 
+        <p:panelGrid layout="grid" columns="2">
+            <p:outputLabel value="Hábitos de tensión: "/>
+                <p:selectOneRadio id="habitos" value="#{BeanNuevoPaciente.atm.habitosTension}">
+                    <f:selectItem itemLabel="Si" itemValue="Si" />
+                    <f:selectItem itemLabel="No" itemValue="No" />
+                </p:selectOneRadio>
+                <p:panelGrid>
+                    <p:selectManyCheckbox id="grid3" value="#{BeanNuevoPaciente.habitosTensionList}" required="true" layout="responsive" columns="1">
+                        <f:selectItem itemLabel="Ninguno" itemValue="Ninguno" />
+                        <f:selectItem itemLabel="Bruxismo" itemValue="Bruxismo"/>
+                        <f:selectItem itemLabel="Unicofagia" itemValue="Unicofagia"/>
+                        <f:selectItem itemLabel="Succión labial" itemValue="Succión labial"/>
+                        <f:selectItem itemLabel="Succión lingual" itemValue="Succión lingual"/>
+                        <f:selectItem itemLabel="Respirador bucal" itemValue="Respirador bucal"/>
+                        <f:selectItem itemLabel="Objetos extraños" itemValue="Objetos extraños"/>
+                    </p:selectManyCheckbox>
+                </p:panelGrid>
+        </p:panelGrid>
+        <p:panel>
+            <h4>Forma del proceso residual</h4>
+            <p:panelGrid>
+                <p:outputLabel value="Maxilar" />
+                <p:panelGrid layout="grid" columns="2">
+                    <p:outputLabel value="U" />
+                    <p:inputText id="maxilarU" value="#{BeanNuevoPaciente.atm.maxilarU}" />
+                    <p:outputLabel value="V" />
+                    <p:inputText id="maxilarV" value="#{BeanNuevoPaciente.atm.maxilarV}" />
+                    <p:outputLabel value="Afilado" />
+                    <p:inputText id="maxilarafilado" value="#{BeanNuevoPaciente.atm.maxilarAfilado}" />
+                </p:panelGrid>
+            </p:panelGrid>
+            <p:panelGrid>
+                <p:outputLabel value="Mandibular" />
+                <p:panelGrid layout="grid" columns="2">
+                    <p:outputLabel value="U" />
+                    <p:inputText id="mandibularU" value="#{BeanNuevoPaciente.atm.mandibularU}" />
+                    <p:outputLabel value="V" />
+                    <p:inputText id="mandibularV" value="#{BeanNuevoPaciente.atm.mandibularV}" />
+                    <p:outputLabel value="Afilado" />
+                    <p:inputText id="mandibularafilado" value="#{BeanNuevoPaciente.atm.mandibularAfilado}" />
+                </p:panelGrid>
+            </p:panelGrid>
+        </p:panel>
+        <p:panel>
+            <p:outputLabel value="Tamaño de la lengua"/>
+            <p:panelGrid>
+                <p:selectOneRadio id="lengua" value="#{BeanNuevoPaciente.atm.tamanoLengua}" layout="pageDirection">
+                    <f:selectItem itemLabel="Normal" itemValue="Normal"/>
+                    <f:selectItem itemLabel="Mediana" itemValue="Mediana"/>
+                    <f:selectItem itemLabel="Grande" itemValue="Grande"/>
+                </p:selectOneRadio>
+            </p:panelGrid>
+        </p:panel>
+        <p:panel>
+            <p:outputLabel value="Torus"/>
+            <h:panelGrid>
+                <p:outputLabel value="Maxilar"/>
+                <p:panelGrid>
+                <p:selectOneRadio id="torusmaxilar" value="#{BeanNuevoPaciente.atm.torusMaxilar}">
+                    <f:selectItem itemLabel="Ninguno" itemValue="Ninguno"/>
+                    <f:selectItem itemLabel="Ligero" itemValue="Ligero"/>
+                    <f:selectItem itemLabel="Requiere remoción" itemValue="Remocion"/>
+                </p:selectOneRadio>
+                </p:panelGrid>
+            </h:panelGrid>
+            <p:spacer/>
+            <h:panelGrid>
+                <h:outputLabel for="torusmandibular" value="Mandibular" />
+                <p:panelGrid>
+                    <p:selectOneRadio id="torusmandibular" value="#{BeanNuevoPaciente.atm.torusMandibular}">
+                        <f:selectItem itemLabel="Ninguno" itemValue="Ninguno"/>
+                        <f:selectItem itemLabel="Ligero" itemValue="Ligero"/>
+                        <f:selectItem itemLabel="Requiere remoción" itemValue="Remocion"/>
+                    </p:selectOneRadio>
+                </p:panelGrid>
+            </h:panelGrid>    
+        </p:panel>
+    </p:panelGrid>
+</html>

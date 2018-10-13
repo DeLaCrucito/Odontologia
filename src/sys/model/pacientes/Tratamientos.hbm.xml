@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.Tratamientos" table="tratamientos" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" not-null="true" />
+        </property>
+        <property name="precio" type="float">
+            <column name="precio" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="folio" type="string">
+            <column name="folio" length="25" />
+        </property>
+        <set name="planTratamientos" table="plan_tratamiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_tratamiento" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.PlanTratamiento" />
+        </set>
+    </class>
+</hibernate-mapping>

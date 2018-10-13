@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.Periodontograma" table="periodontograma" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="paciente" class="sys.model.pacientes.Paciente" fetch="select">
+            <column name="paciente" />
+        </many-to-one>
+        <property name="estado" type="string">
+            <column name="estado" />
+        </property>
+        <property name="dientes" type="string">
+            <column name="dientes" length="6000" />
+        </property>
+        <set name="consultases" table="consultas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="periodontograma" />
+            </key>
+            <one-to-many class="sys.model.pacientes.Consultas" />
+        </set>
+    </class>
+</hibernate-mapping>

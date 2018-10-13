@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+        <p:panel header="Datos del Paciente">
+            <p:messages />
+            <h:panelGrid columns="2" cellpadding="5">
+                <h:outputText value="Folio: *" />
+                <p:inputText value="#{BeanNuevoPaciente.paciente.folio}" required="true" label="Folio"/>
+
+                <h:outputText value="Nombre: *" />
+                <p:inputText value="#{BeanNuevoPaciente.paciente.nombre}" required="true" label="Nombre"/>
+
+                <h:outputText value="Edad: *" />
+                <p:inputText value="#{BeanNuevoPaciente.paciente.edad}" required="true" label="Edad"/>
+
+                    <p:outputLabel for="sexo" value="Sexo:" />
+                    <p:selectOneRadio id="sexo" value="#{BeanNuevoPaciente.paciente.sexo}">
+                        <f:selectItem itemLabel="Masculino" itemValue="M" />
+                        <f:selectItem itemLabel="Femenino" itemValue="F" />
+                    </p:selectOneRadio>
+
+                    <p:outputLabel for="fechaNacimiento" value="Fecha de Nacimiento: " />
+                    <p:inputMask id="fechaNacimiento" value="#{BeanNuevoPaciente.paciente.fechaNacim}" mask="9999-99-99"/>
+
+                <p:outputLabel for="phone" value="Teléfono:" />
+                <p:inputMask id="phone" value="#{BeanNuevoPaciente.paciente.telefono}" mask="(999) 999 9999"/>
+
+                <h:outputText value="Estatura (cm): *" />
+                <p:inputText id="Estatura" value="#{BeanNuevoPaciente.paciente.estatura}"/>
+
+                <h:outputText value="Peso (kg): *" />
+                <p:inputText id="Peso" value="#{BeanNuevoPaciente.paciente.peso}"/>
+
+
+                <p:outputLabel for="EstadoCivil" value="Estado civil:" />
+                <p:selectOneMenu id="EstadoCivil" value="#{BeanNuevoPaciente.paciente.estadoCivil}">
+                    <f:selectItem itemLabel="Soltero" itemValue="Soltero" />
+                    <f:selectItem itemLabel="Casado" itemValue="Casado" />
+                    <f:selectItem itemLabel="Divorciado" itemValue="Divorciado" />
+                    <f:selectItem itemLabel="Otro" itemValue="Otro"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="NivelEstudios" value="Nivel de Estudios:" />
+                <p:selectOneMenu id="NivelEstudios" value="#{BeanNuevoPaciente.paciente.nivelEstudios}">
+                    <f:selectItem itemLabel="Básico" itemValue="Básico" />
+                    <f:selectItem itemLabel="Medio Superior" itemValue="Medio Superior" />
+                    <f:selectItem itemLabel="Licenciatura" itemValue="Licenciatura" />
+                    <f:selectItem itemLabel="Maestría" itemValue="Maestría"/>
+                    <f:selectItem itemLabel="Doctorado" itemValue="Doctorado"/>
+                </p:selectOneMenu>
+
+                <p:outputLabel for="EstadoSalud" value="¿Cómo considera su estado de salud?" />
+                <p:selectOneRadio id="EstadoSalud" value="#{BeanNuevoPaciente.paciente.estadoSalud}">
+                        <f:selectItem itemLabel="Bueno" itemValue="Bueno" />
+                        <f:selectItem itemLabel="Malo" itemValue="Malo" />
+                        <f:selectItem itemLabel="Regular" itemValue="Regular"/>
+                    </p:selectOneRadio>
+
+                <h4>Domicilio:</h4>
+                <h:outputText value="" />
+
+                <h:outputText value="Pais: *" />
+                <p:inputText id="Pais" value="#{BeanNuevoPaciente.dirreccionPaciente.pais}"/>
+
+                <h:outputText value="Estado: *" />
+                <p:inputText id="Estado" value="#{BeanNuevoPaciente.dirreccionPaciente.estado}"/>
+
+                <h:outputText value="Ciudad: *" />
+                <p:inputText id="Ciudad" value="#{BeanNuevoPaciente.dirreccionPaciente.ciudad}"/>
+
+                <h:outputText value="Calle: *" />
+                <p:inputText id="calle" value="#{BeanNuevoPaciente.dirreccionPaciente.calle}"/>
+
+                <h:outputText value="Colonia: *" />
+                <p:inputText id="colonia" value="#{BeanNuevoPaciente.dirreccionPaciente.colonia}"/>
+
+                <h4>Ocupación:</h4>
+                <h:outputText value="" />
+
+                <h:outputText value="Ocupación: *" />
+                <p:inputText id="Ocupacion" value="#{BeanNuevoPaciente.trabajoPaciente.ocupacion}"/>
+
+                <h:outputText value="Dirección de oficina: *" />
+                <p:inputText id="DireccionOficina" value="#{BeanNuevoPaciente.trabajoPaciente.lugarTrabajo}"/>
+
+                <h:outputText value="Teléfono oficina: *" />
+                <p:inputMask id="TelOficina" value="#{BeanNuevoPaciente.trabajoPaciente.telefonoTrabajo}" mask="(999) 999 9999"/>
+
+                <h4>Médico :</h4>
+                <h:outputText value="" />
+
+                <h:outputText value="Nombre: *" />
+                <p:inputText id="NombreMedico" value="#{BeanNuevoPaciente.medico.nombreMedico}"/>
+
+                <h:outputText value="Teléfono: *" />
+                <p:inputMask id="TelMedico" value="#{BeanNuevoPaciente.medico.telefonoMedico}" mask="(999) 999 9999"/>
+
+                <h:outputText value="Dirección: *" />
+                <p:inputText id="DireccionMedico" value="#{BeanNuevoPaciente.medico.direccionMedico}"/>
+
+                <h:outputText value="¿Por qué solicita un tratamiento?"/>
+                <p:inputTextarea rows="6" cols="33" value="#{BeanNuevoPaciente.paciente.porqueSolicita}"/>
+
+                <h:outputText value="Observaciones"/>
+                <p:inputTextarea rows="6" cols="33" value="#{BeanNuevoPaciente.paciente.observaciones}" />
+
+            </h:panelGrid>
+
+        </p:panel>
+
+
+
+</html>

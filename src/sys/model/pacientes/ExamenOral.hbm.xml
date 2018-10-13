@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.ExamenOral" table="examen_oral" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="dolor" type="string">
+            <column name="dolor" length="25" not-null="true" />
+        </property>
+        <property name="dolorOrgano" type="string">
+            <column name="dolor_organo" />
+        </property>
+        <property name="dolorUbicacion" type="string">
+            <column name="dolor_ubicacion" length="1000" />
+        </property>
+        <property name="dolorDuracion" type="time">
+            <column name="dolor_duracion" length="8" />
+        </property>
+        <property name="dolorEstimulo" type="string">
+            <column name="dolor_estimulo" />
+        </property>
+        <property name="lesionPulpar" type="string">
+            <column name="lesion_pulpar" not-null="true" />
+        </property>
+        <property name="exposicionPulpar" type="string">
+            <column name="exposicion_pulpar" not-null="true" />
+        </property>
+        <property name="inflamacion" type="string">
+            <column name="inflamacion" not-null="true" />
+        </property>
+        <property name="percusionOrgano" type="string">
+            <column name="percusion_organo" />
+        </property>
+        <property name="percusionVertical" type="string">
+            <column name="percusion_vertical" />
+        </property>
+        <property name="percusionHorizontal" type="string">
+            <column name="percusion_horizontal" />
+        </property>
+        <property name="percusionPalpacion" type="string">
+            <column name="percusion_palpacion" />
+        </property>
+        <property name="frioOrgano" type="string">
+            <column name="frio_organo" />
+        </property>
+        <property name="frioEstado" type="string">
+            <column name="frio_estado" />
+        </property>
+        <property name="calorOrgano" type="string">
+            <column name="calor_organo" />
+        </property>
+        <property name="calorEstado" type="string">
+            <column name="calor_estado" />
+        </property>
+        <set name="examenOrofacials" table="examen_orofacial" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="examen_oral" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ExamenOrofacial" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <h1>
+                            Alumnos
+                            <small>Tratamientos Realizados</small>
+                        </h1>
+
+                        <p:separator/>
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+
+                        <h:form id="formInsertar">
+                            <p:panel id="panel" header="Materias" style="margin-bottom:5px; font-size: 11px;">
+                                <h:panelGrid columns="15" cellpadding="10">
+
+                                    <p:outputLabel value="Clave  "/><p:spacer width="10" height="10"/>
+                                    <p:inputText id="clave" value="#{beanBitacora.mmaterias.clave}"
+                                                 required="true" requiredMessage="Ingrese la clave" />
+
+                                    <p:spacer width="10" height="10"/>
+
+                                    <p:commandButton actionListener="#{beanBitacora.verTratamientos()}" class="btn btn-info" value="Mostrar" update=":formMostrarMaterias:tablaMostrarMaestros"/>
+
+
+
+
+                                </h:panelGrid>
+                            </p:panel>
+                        </h:form>
+
+                        <h:form id="formMostrarMaterias">
+                            <p:dataTable id="tablaMostrarMaestros" var="master" value="#{beanBitacora.bita}" rows="10" paginator="true"
+                                         emptyMessage="No hay datos" style="font-size: 11px;">
+                                
+                              
+
+                                <p:column headerText="Nombre">
+                                    <h:outputText value="#{master.alumnos.nombre} #{master.alumnos.apellidoPaterno} #{master.alumnos.apellidoMaterno}"/>
+                                </p:column>
+
+                        
+                                 <p:column headerText="Tratamiento">
+                                     <h:outputText value="#{master.menuTratamientos.nameTratamiento}"/>
+                                </p:column>
+                                
+                                 <p:column headerText="Cantidad">
+                                     <h:outputText value="#{master.cantidad}"/>
+                                </p:column>
+                                
+                                  <p:column headerText="Clinica">
+                                      <h:outputText value="#{master.clinica}"/>
+                                </p:column>
+                                
+                                   <p:column headerText="Comentario">
+                                       <h:outputText value="#{master.comentario}"/>
+                                </p:column>
+                                
+                                  <p:column headerText="Fecha">
+                                      <h:outputText value="#{master.fecha}"/>
+                                </p:column>
+                               
+                                
+                                  <p:column headerText="Paciente">
+                                      <h:outputText value="#{master.nombrePaciente}"/>
+                                </p:column>
+                                
+                                  <p:column headerText="Maestro">
+                                      <h:outputText value="#{master.maestroMaterias.maestro.nombre} #{master.maestroMaterias.maestro.apellidoPaterno} #{master.maestroMaterias.maestro.apellidoMaterno}"/>
+                                </p:column>
+                                
+                                     <p:column headerText="Materia">
+                                         <h:outputText value="#{master.maestroMaterias.materias.materia}"/>
+                                </p:column>
+                            
+
+
+                            </p:dataTable>
+                        </h:form>
+
+                        
+                    </section>
+
+
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

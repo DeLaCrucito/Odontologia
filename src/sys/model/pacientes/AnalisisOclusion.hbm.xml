@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.AnalisisOclusion" table="analisis_oclusion" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="clasificacion" type="string">
+            <column name="clasificacion" not-null="true" />
+        </property>
+        <property name="proteccionCanina" type="string">
+            <column name="proteccion_canina" not-null="true" />
+        </property>
+        <property name="proteccionAnterior" type="string">
+            <column name="proteccion_anterior" not-null="true" />
+        </property>
+        <property name="funcionGrupo" type="string">
+            <column name="funcion_grupo" not-null="true" />
+        </property>
+        <property name="proteccionMutua" type="string">
+            <column name="proteccion_mutua" not-null="true" />
+        </property>
+        <property name="mordidaCruzada" type="string">
+            <column name="mordida_cruzada" not-null="true" />
+        </property>
+        <property name="mordidaAbierta" type="string">
+            <column name="mordida_abierta" not-null="true" />
+        </property>
+        <property name="sobremordida" type="string">
+            <column name="sobremordida" not-null="true" />
+        </property>
+        <property name="contactoDentatorio" type="string">
+            <column name="contacto_dentatorio" not-null="true" />
+        </property>
+        <property name="incisalHorizontal" type="string">
+            <column name="incisal_horizontal" />
+        </property>
+        <property name="incisalVertical" type="string">
+            <column name="incisal_vertical" />
+        </property>
+        <property name="mandibularProtusivo" type="string">
+            <column name="mandibular_protusivo" />
+        </property>
+        <property name="mandibularDerecho" type="string">
+            <column name="mandibular_derecho" />
+        </property>
+        <property name="madibularIzquierdo" type="string">
+            <column name="madibular_izquierdo" />
+        </property>
+        <set name="examenOrofacials" table="examen_orofacial" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="analisis_oclusion" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ExamenOrofacial" />
+        </set>
+    </class>
+</hibernate-mapping>

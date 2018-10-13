@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaCoordinacion.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+                    <!-- Main content -->
+                    <section class="content">
+                        <h1>
+                            Materias
+                            <small>Coordinación</small>
+                        </h1>
+
+                        <p:separator/>
+                    <h:form id="formMaterias">
+                        
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+                        <p:commandButton value="Agregar Materias" actionListener="#{beanMaestroMaterias.prepararNuevoMaestroM(actionEvent)}" oncomplete="PF('dlgMateriaNueva').show();" 
+                                         update=":formMateriaNueva" style="font-size: 12px;" />
+                        <p:separator/>
+
+                     
+                      
+                            <p:dataTable id="materias" var="materias" value="#{beanMaterias.listar}" sortBy="#{materias.semestre}" expandableRowGroups="true" style="font-size: 11px;">
+                                <p:headerRow>
+                                    <p:column colspan="2">
+                                        <h:outputText value="#{materias.semestre} Semestre"/>
+                                    </p:column>
+                                </p:headerRow>
+                                <p:column headerText="Materias">
+                                 
+                                    <h:outputText value="#{materias.materia}" style="text-align: center" />
+                                </p:column>
+
+                                <p:column headerText="Actualziar - Eliminar">
+                                     <p:commandButton value="Modificar" oncomplete="PF('dlgEditar').show();" class="btn btn-info"
+                                                     update=":formActualizar">
+                                         <f:setPropertyActionListener target="#{beanMaterias.materia}" value="#{materias}"/>
+                                    </p:commandButton>
+
+                                    <p:spacer></p:spacer>
+                                     <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminar').show();" class="btn btn-danger"
+                                                     update=":formEliminar" >
+                                         <f:setPropertyActionListener target="#{beanMaterias.materia}" value="#{materias}"/>
+                                    </p:commandButton>
+
+                                   
+                                </p:column>
+
+                            </p:dataTable>
+                        </h:form>   
+
+                         <p:dialog id="dlgNuevaMateria" header="Nueva Materia" widgetVar="dlgMateriaNueva" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formMateriaNueva">
+                                <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                    <p:outputLabel value="Materia:"/>
+                                    <p:inputText value="#{beanMaterias.materia.materia}"
+                                                 required="true" requiredMessage="Materia es obligatorio"/>
+
+                                    <p:outputLabel value="Semestre:"/>
+                                    <p:selectOneMenu id="semestre" value="#{beanMaterias.materia.semestre}"
+                                                     required="true" requiredMessage="Seleccione el Semestre Correspondiente">
+                                        <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
+                                        <f:selectItem itemLabel="1°" itemValue="1"/>
+                                        <f:selectItem itemLabel="2°" itemValue="2"/>
+                                        <f:selectItem itemLabel="3°" itemValue="3"/>
+                                        <f:selectItem itemLabel="4°" itemValue="4"/>
+                                        <f:selectItem itemLabel="5°" itemValue="5"/>
+                                        <f:selectItem itemLabel="6"  itemValue="6"/>
+                                        <f:selectItem itemLabel="7°" itemValue="7"/>
+                                        <f:selectItem itemLabel="8°" itemValue="8"/>
+                                        <f:selectItem itemLabel="9°" itemValue="9"/>
+
+                                        <f:ajax execute="grado" />
+                                    </p:selectOneMenu>
+
+
+                                    <p:commandButton value="Guardar" actionListener="#{beanMaterias.insertarMateria()}" 
+                                                     oncomplete="PF('dlgMateriaNueva').hide();" update=":formMaterias"/>
+                                    <p:commandButton value="Cancelar" onclick="PF('dlgMateriaNueva').hide();" 
+                                                     immediate="true" />
+
+                                </h:panelGrid>
+                            </h:form>
+
+                        </p:dialog>
+                        
+                        <p:dialog id="dlgActulizarMateria" header="Editar Registro" widgetVar="dlgEditar" showEffect="drop" hideEffect="drop" modal="true">
+                            <h:form id="formActualizar">
+                                <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
+                                  
+                                     <p:outputLabel value="Semestre"/>
+                                    <p:inputText value="#{beanMaterias.materia.semestre}"
+                                                  required="true" requiredMessage="El semestre es obligatorio"/>
+
+                                    <p:outputLabel value="Materia"/>
+                                    <p:inputText value="#{beanMaterias.materia.materia}"
+                                                 required="true" requiredMessage="La materia es obligatorio"/>
+
+
+                                    <p:commandButton value="Guardar Cambios" actionListener="#{beanMaterias.actualziarMaterias()}" 
+                                                     oncomplete="PF('dlgEditar').hide();" update=":formMaterias"/>
+                                    <p:commandButton value="Cancelar" onclick="PF('dlgEditar').hide();" 
+                                                     immediate="true" />
+
+                                </h:panelGrid>
+                            </h:form>
+
+                        </p:dialog>
+
+
+                          <p:dialog id="dlgE" header="Eliminar Materia" widgetVar="dlgEliminar" showEffect="drop"
+                                  hideEffect="drop" modal="true">
+                            <h:form id="formEliminar" style="font-size: 11px;">
+
+                                <h:outputText value="¿Desea eliminar este registro?"/> <br/><br/>
+                                <p:commandButton value="Si" actionListener="#{beanMaterias.eliminarMaterias()}"
+                                                 update=":formMaterias" onclick="PF('dlgEliminar').hide();" immediate="true"/>
+                                <p:commandButton value="No" onclick="PF('dlgEliminar').hide();"
+                                                 immediate="true"/>
+                            </h:form>
+                        </p:dialog>
+
+
+                    </section>
+                </div>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.Paciente" table="paciente" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="direccionPaciente" class="sys.model.pacientes.DireccionPaciente" fetch="select">
+            <column name="domicilio" not-null="true" />
+        </many-to-one>
+        <many-to-one name="medicoPaciente" class="sys.model.pacientes.MedicoPaciente" fetch="select">
+            <column name="medico" not-null="true" />
+        </many-to-one>
+        <many-to-one name="trabajoPaciente" class="sys.model.pacientes.TrabajoPaciente" fetch="select">
+            <column name="ocupacion" not-null="true" />
+        </many-to-one>
+        <property name="folio" type="string">
+            <column name="folio" not-null="true" unique="true" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="100" not-null="true" />
+        </property>
+        <property name="edad" type="int">
+            <column name="edad" not-null="true" />
+        </property>
+        <property name="sexo" type="string">
+            <column name="sexo" not-null="true" />
+        </property>
+        <property name="fechaNacim" type="date">
+            <column name="fecha_nacim" length="10" not-null="true" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="15" not-null="true" />
+        </property>
+        <property name="estatura" type="string">
+            <column name="estatura" length="10" not-null="true" />
+        </property>
+        <property name="peso" type="string">
+            <column name="peso" length="10" not-null="true" />
+        </property>
+        <property name="estadoCivil" type="string">
+            <column name="estado_civil" not-null="true" />
+        </property>
+        <property name="nivelEstudios" type="string">
+            <column name="nivel_estudios" not-null="true" />
+        </property>
+        <property name="estadoSalud" type="string">
+            <column name="estado_salud" not-null="true" />
+        </property>
+        <property name="porqueSolicita" type="string">
+            <column name="porque_solicita" not-null="true" />
+        </property>
+        <property name="observaciones" type="string">
+            <column name="observaciones" not-null="true" />
+        </property>
+        <property name="fechaRegistro" type="date">
+            <column name="fecha_registro" length="10" not-null="true" />
+        </property>
+        <set name="controlPlacas" table="control_placa" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paciente" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ControlPlaca" />
+        </set>
+        <set name="examenOrofacials" table="examen_orofacial" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paciente" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ExamenOrofacial" />
+        </set>
+        <set name="planTratamientos" table="plan_tratamiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_paciente" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.PlanTratamiento" />
+        </set>
+        <set name="preguntasPacientes" table="preguntas_paciente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paciente" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.PreguntasPaciente" />
+        </set>
+        <set name="periodontogramas" table="periodontograma" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paciente" />
+            </key>
+            <one-to-many class="sys.model.pacientes.Periodontograma" />
+        </set>
+        <set name="consultases" table="consultas" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="paciente" />
+            </key>
+            <one-to-many class="sys.model.pacientes.Consultas" />
+        </set>
+    </class>
+</hibernate-mapping>

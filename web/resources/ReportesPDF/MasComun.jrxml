@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="01ef0197-a205-4e05-9187-d49bf0b3c2ca">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="311"/>
+	<parameter name="fecha1" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="fecha2" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select sum(cantidad) as cantidad, T3.tratamiento,name_tratamiento from menu_tratamientos T1  inner join
+ bitacora_recibos T2 inner join area_tratamientos T3 where T1.contador=T2.tratamiento 
+ and T3.area=T1.area_tratamiento and T2.fecha between $P{fecha1} and $P{fecha2} group by T1.contador, 
+ T1.name_tratamiento order by cantidad   desc limit 10]]>
+	</queryString>
+	<field name="cantidad" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name_tratamiento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="112" splitType="Stretch">
+			<staticText>
+				<reportElement x="73" y="59" width="400" height="20" uuid="9a125665-5d4b-418b-bcab-8b8a2d6c92b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Reporte General]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="28" width="400" height="28" uuid="2493634d-a40c-493f-aa03-a5be288fc352"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Facultad de Odontología.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="79" width="555" height="33" uuid="223a9ff5-02b6-4721-a3c3-47f39af4b87d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Correspondiente a las fechas: "+$P{fecha1}+" al "+$P{fecha2}+" de los tratamientos\n más comunes y realizados en todas las clínicas."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="73" y="0" width="400" height="28" uuid="7bf3803d-47d2-4627-a35f-f4de60b9a164"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Universidad Autónoma de Campeche.]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="473" y="0" width="82" height="79" uuid="3771906d-76f1-4cbe-877f-0e3257acd05a"/>
+				<imageExpression><![CDATA["C:\\FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="73" height="79" uuid="6bfcf381-369e-4906-af46-feb7e9cc6864"/>
+				<imageExpression><![CDATA["C:\\logo-uac-avanza-255x300.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnFooter>
+		<band height="640">
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="556" height="640" uuid="6d2d2a29-8f24-441c-97bb-214432080175"/>
+				<imageExpression><![CDATA["C:\\FONDO_PAGG_FDO RENDER LOGO-01.png"]]></imageExpression>
+			</image>
+			<pie3DChart>
+				<chart>
+					<reportElement x="1" y="0" width="555" height="325" uuid="9969fb5b-af66-41a7-b201-05a3496f3d38"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{name_tratamiento}]]></keyExpression>
+					<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+				</pieDataset>
+				<pie3DPlot>
+					<plot/>
+					<itemLabel/>
+				</pie3DPlot>
+			</pie3DChart>
+			<bar3DChart>
+				<chart>
+					<reportElement x="-2" y="345" width="555" height="295" uuid="8a2cb51e-0d94-442d-9040-6d30870b1cf7"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA["Tratamientos"]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{name_tratamiento}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{cantidad}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot orientation="Horizontal"/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="50">
+			<textField>
+				<reportElement x="434" y="30" width="80" height="20" uuid="bc0297be-8b61-4ff0-91fd-cbf5bf959a8f"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="514" y="30" width="40" height="20" uuid="28ff6beb-96f0-4fd6-a8fc-dba984f46a2d"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="-2" y="30" width="124" height="20" uuid="4c98deb4-0664-4d66-8fb6-543faade19a1"/>
+				<text><![CDATA[Facultad de Odontología]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

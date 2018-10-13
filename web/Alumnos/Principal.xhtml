@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <body>
+
+        <ui:composition template="./../Template/VistasMarcos/PlantillaAlumnos.xhtml">
+
+            <ui:define name="content">
+                <div class="content-wrapper">
+
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <h1>
+                            BIENVENIDO
+                            <small>Alumno</small>
+                        </h1>
+
+                        <p:galleria value="#{beanImagenes.images}" var="image" panelWidth="920" panelHeight="400" showCaption="true">
+                            <p:graphicImage name="/gallery/#{image}" title="Facultad de odontología."/>
+                        </p:galleria>
+                        <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
+
+                    </section><!-- /.content -->
+                </div><!-- /.content-wrapper -->
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
