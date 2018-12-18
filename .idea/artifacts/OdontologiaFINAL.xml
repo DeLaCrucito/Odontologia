@@ -12,7 +12,8 @@
           <element id="library" level="project" name="PrimeFaces-6.1" />
           <element id="library" level="project" name="JPA 2.0-2.0" />
           <element id="library" level="project" name="Java EE 6-Java EE 6" />
-          <element id="library" level="project" name="commons-digester-1.7" />
+          <element id="library" level="project" name="net.sf.jasperreports:jasperreports:6.2.0" />
+          <element id="library" level="project" name="mysql:mysql-connector-java:5.1.41" />
         </element>
       </element>
     </root>

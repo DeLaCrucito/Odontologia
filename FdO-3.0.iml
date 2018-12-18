@@ -45,6 +45,7 @@
     <orderEntry type="library" name="JPA 2.0-2.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="GlassFish 4.1.1" level="application_server_libraries" />
     <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
-    <orderEntry type="library" name="commons-digester-1.7" level="project" />
+    <orderEntry type="library" name="net.sf.jasperreports:jasperreports:6.2.0" level="project" />
+    <orderEntry type="library" name="mysql:mysql-connector-java:5.1.41" level="project" />
   </component>
 </module>
