@@ -80,7 +80,7 @@
                                         <p:outputLabel for="popup2" value="Hasta: " />
                                         <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup2" value="#{beanReportes.fecha2}" />
                                     </h:panelGrid>
-                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                    <p:commandButton value="Descargar" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
                                         <p:fileDownload value="#{beanReportes.reporteClinicasDentroDeFechaDet3()}"/>
                                     </p:commandButton>
                                 </h:form>
@@ -99,11 +99,11 @@
                                         </h:selectOneMenu>
                                         <p:outputLabel for="popup3" value="Desde: " />
                                         <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup3" value="#{beanReportes.fecha1}" />
-                                        <p:outputLabel for="popup4" value="Desde: " />
+                                        <p:outputLabel for="popup4" value="Hasta: " />
                                         <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup4" value="#{beanReportes.fecha2}" />
                                     </h:panelGrid>
 
-                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                    <p:commandButton value="Descargar" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
                                         <p:fileDownload value="#{beanReportes.reportePorClinicaPorFechas4()}"/>
                                     </p:commandButton>
                                 </h:form>
@@ -117,11 +117,11 @@
                                         
                                         <p:outputLabel for="popup5" value="Desde: " />
                                         <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup5" value="#{beanReportes.fecha1}" />
-                                        <p:outputLabel for="popup6" value="Desde: " />
+                                        <p:outputLabel for="popup6" value="Hasta: " />
                                         <p:calendar pattern="dd-MM-yyyy" mask="true"  id="popup6" value="#{beanReportes.fecha2}" />
                                     </h:panelGrid>
 
-                                    <p:commandButton value="Download" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
+                                    <p:commandButton value="Descargar" ajax="false" onclick="PrimeFaces.monitorDownload(showStatus, hideStatus)" icon="ui-icon-arrowthick-1-s" >
                                         <p:fileDownload value="#{beanReportes.alumnosDestacados5()}"/>
                                     </p:commandButton>
                                 </h:form>

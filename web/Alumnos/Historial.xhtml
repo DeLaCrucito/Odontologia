@@ -32,11 +32,11 @@
                             <p:spacer/>
                                 <p:dataTable id="dataTable" var="pacientes" value="#{ConsultaPaciente.consulta}"
                                              emptyMessage="No hay datos" paginator="true" rows="10">
-                                    <p:column style="text-align: center;">
+                                    <p:column style="text-align: center;" sortBy="#{fecha}">
                                         <f:facet name="header">
                                             <h:outputText value="Fecha de consulta" />
                                         </f:facet>
-                                        <h:outputText value="#{pacientes.fecha}" />
+                                        <h:outputText value="#{pacientes.fecha}"  />
                                     </p:column>
 
                                     <p:column style="text-align: center;">

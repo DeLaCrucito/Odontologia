@@ -21,7 +21,7 @@ public class beanImagenes {
     @PostConstruct
     public void init() {
         images = new ArrayList<String>();
-        for (int i = 1; i <= 7; i++) {
+        for (int i = 1; i <= 10; i++) {
             images.add( i + ".jpg");
         }
     }

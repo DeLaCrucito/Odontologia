@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.HallazgosRadiograficos" table="hallazgos_radiograficos" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="tipoRx" type="string">
+            <column name="tipo_rx" not-null="true" />
+        </property>
+        <property name="soporteOseo" type="string">
+            <column name="soporte_oseo" not-null="true" />
+        </property>
+        <property name="relacionCoronaRaiz" type="string">
+            <column name="relacion_corona_raiz" not-null="true" />
+        </property>
+        <property name="alturaReborde" type="string">
+            <column name="altura_reborde" not-null="true" />
+        </property>
+        <property name="engrosamientoLigamentoPeriodontal" type="string">
+            <column name="engrosamiento_ligamento_periodontal" not-null="true" />
+        </property>
+        <property name="interpretacion" type="string">
+            <column name="interpretacion" not-null="true" />
+        </property>
+        <set name="examenOrofacials" table="examen_orofacial" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="hallazgos_radiograficos" />
+            </key>
+            <one-to-many class="sys.model.pacientes.ExamenOrofacial" />
+        </set>
+    </class>
+</hibernate-mapping>

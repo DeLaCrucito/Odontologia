@@ -36,7 +36,7 @@
                             <!-- mini logo for sidebar mini 50x50 pixels -->
                             <span class="logo-mini"><b>F</b>O</span>
                             <!-- logo for regular state and mobile devices -->
-                            <span class="logo-lg"><b>F de </b>O</span>
+                            <span class="logo-lg"><b>Odontología</b></span>
                         </a>
 
                         <!-- Header Navbar -->
@@ -119,6 +119,9 @@
                                                                 <p:spacer/><p:spacer/> 
                                                                 <p:commandButton value="Guardar" actionListener="#{beanAlumnos.editar()}"  
                                                                                  oncomplete="PF('dlgNuevo').hide();" update=":formEditarPerfil"/>
+                                                                <p:commandButton value="Cancelar" action="#"
+                                                                                 update=":formEditarPerfil" immediate="true"
+                                                                                 onclick="PF('dlgNuevo').hide();" />
                                                                 
                                                             </h:panelGrid>
                                                         </h:form>

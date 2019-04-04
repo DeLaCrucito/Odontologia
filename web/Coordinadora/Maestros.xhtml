@@ -15,14 +15,14 @@
                     <!-- Main content -->
                     <section class="content">
                         <h1>
-                            Maestros
+                            Docentes
                             <small>Coordinación</small>
                         </h1>
 
                         <p:separator/>
                         <h:form id="mostrarMaMateria">
                             <p:growl id="mensajeGeneral" autoUpdate="true" showDetail="true" life="3000"/>
-                            <p:commandButton value="Nuevo Maestro" actionListener="#{beanMaestro.prepararNuevoMaestro(actionEvent)}" oncomplete="PF('dlgNuevo').show();" 
+                            <p:commandButton value="Nuevo Docente" actionListener="#{beanMaestro.prepararNuevoMaestro(actionEvent)}" oncomplete="PF('dlgNuevo').show();"
                                              update=":formInsertar" style="font-size: 12px;" />
                             <p:commandButton value="Asignar Materia" actionListener="#{beanMaestroMaterias.prepararNuevoMaestroM(actionEvent)}" oncomplete="PF('dlgMateria').show();" 
                                              update=":formMateria" style="font-size: 12px;" />
@@ -33,7 +33,7 @@
                                              emptyMessage="No hay datos" style="font-size: 11px;" paginator="true">
 
 
-                                    <p:column headerText="Nombre Maestro ">
+                                    <p:column headerText="Docente ">
                                         <h:outputText value="#{master.maestro.nombre} #{master.maestro.apellidoPaterno} #{master.maestro.apellidoMaterno}"/>
                                     </p:column>
                                     <p:column headerText="Materia">
@@ -48,7 +48,7 @@
                                     <p:column headerText="Clave">
                                         <h:outputText value="#{master.clave}"/>
                                     </p:column>
-                                    <p:column headerText="Elminar materia a docente">
+                                    <p:column headerText="Elminar materia del docente">
                                         <p:commandButton value="Eliminar" oncomplete="PF('dlgEliminarMateria').show();" class="btn btn-danger"
                                                          >
                                             <f:setPropertyActionListener target="#{beanMaestro.maestroMaterias}" value="#{master}"/>
@@ -103,10 +103,10 @@
                             <p:dataTable id="tablaMostrarMaestros" var="master" value="#{beanMaestro.listar}" rows="10" paginator="true"
                                          emptyMessage="No hay datos" style="font-size: 11px;">
 
-                                <p:column headerText="Id Maestro ">
+                                <p:column headerText="Numero del Docente ">
                                     <h:outputText value="#{master.idEmpleado}"/>
                                 </p:column>
-                                <p:column headerText="Nombre Maestro ">
+                                <p:column headerText="Nombre del Docente ">
                                     <h:outputText value="#{master.nombre} #{master.apellidoPaterno} #{master.apellidoMaterno}"/>
                                 </p:column>
                                 <p:column headerText="Correo ">
@@ -132,7 +132,7 @@
                         <p:dialog id="dlgActulizarMaestro" header="Editar Registro" widgetVar="dlgEditar" showEffect="drop" hideEffect="drop" modal="true">
                             <h:form id="formActualizar">
                                 <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
-                                    <p:outputLabel value="ID de empleado:"/>
+                                    <p:outputLabel value="N° de empleado:"/>
                                     <p:inputText value="#{beanMaestro.maestro.idEmpleado}"
                                                  disabled="true" required="true" requiredMessage="El ID es obligatorio"/>
 
@@ -195,7 +195,7 @@
                         <p:dialog id="dlgMaestroMateria" header="Asignar Materia" widgetVar="dlgMateria" showEffect="drop" hideEffect="drop" modal="true">
                             <h:form id="formMateria">
                                 <h:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
-                                    <p:outputLabel value="Maestro"/>
+                                    <p:outputLabel value="Docente"/>
                                     <p:selectOneMenu id="maestro" value="#{beanMaestro.maestroMaterias.maestro.idEmpleado}"
                                                      required="true" requiredMessage="Seleccione un grado">
                                         <f:selectItem itemLabel="---Seleccione---"/>
@@ -215,6 +215,7 @@
                                         <f:selectItem itemLabel="6" itemValue="6"/>
                                         <f:selectItem itemLabel="7" itemValue="7"/>
                                         <f:selectItem itemLabel="8" itemValue="8"/>
+                                        <f:selectItem itemLabel="9" itemValue="9"/>
                                         <f:ajax execute="grupo" render="materia"/>
                                     </p:selectOneMenu>
 

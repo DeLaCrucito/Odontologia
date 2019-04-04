@@ -18,7 +18,7 @@
                     <section class="content">
 
                         <h1>
-                            Encargada de Farmacia
+                            Encargado(a)
                             <small>Coordinación</small>
                         </h1>
 
@@ -33,7 +33,7 @@
                         <p:dialog id="dlgNuevoMaestro" header="Nuevo Registro" widgetVar="dlgNuevo" showEffect="drop" hideEffect="drop" modal="true">
                             <h:form id="formInsertar">
                                 <p:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
-                                    <p:outputLabel value="ID del empleado:"/>
+                                    <p:outputLabel value="Número del empleado:"/>
                                     <p:inputText value="#{beanEncargadaClinica.encargada.idEmpleado}"
                                                  required="true" requiredMessage="El ID es obligatorio"/>
 
@@ -48,13 +48,16 @@
                                     <p:outputLabel value="Apellido Materno"/>
                                     <p:inputText value="#{beanEncargadaClinica.encargada.apellidoMaterno}"/>
 
-                                    <p:outputLabel value="Clinica"/>
+                                    <p:outputLabel value="Clínica"/>
                                     <p:selectOneMenu id="clinica" value="#{beanEncargadaClinica.encargada.clinica}"
                                                      required="true" requiredMessage="Seleccione la clinica">
                                         <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
-                                        <f:selectItem itemLabel="Clinica 1" itemValue="Clinica 1"/>
-                                        <f:selectItem itemLabel="Clinica 2" itemValue="Clinica 2"/>
-                                        <f:selectItem itemLabel="Clinica 3" itemValue="Clinica 3"/>
+                                        <f:selectItem itemLabel="Clínica 1" itemValue="Clínica 1"/>
+                                        <f:selectItem itemLabel="Clínica 2" itemValue="Clínica 2"/>
+                                        <f:selectItem itemLabel="Clínica 3" itemValue="Clínica 3"/>
+                                        <f:selectItem itemLabel="Clínica 4" itemValue="Clínica 4"/>
+                                        <f:selectItem itemLabel="Clínica 5" itemValue="Clínica 5"/>
+                                        <f:selectItem itemLabel="Clínica 6" itemValue="Clínica 6"/>
 
                                         <f:ajax execute="clinica" />
                                     </p:selectOneMenu>
@@ -86,13 +89,13 @@
                             <p:dataTable id="tablaMostrarEncargada" var="master" value="#{beanEncargadaClinica.verEncargada}" rows="10" paginator="true"
                                          emptyMessage="No hay datos" style="font-size: 11px;">
 
-                                <p:column headerText="Id  ">
+                                <p:column headerText="Número de Empleado">
                                     <h:outputText value="#{master.idEmpleado}"/>
                                 </p:column>
                                 <p:column headerText="Nombre  ">
                                     <h:outputText value="#{master.nombre} #{master.apellidoPaterno} #{master.apellidoMaterno}"/>
                                 </p:column>
-                                <p:column headerText="Clinica ">
+                                <p:column headerText="Clínica ">
                                     <h:outputText value="#{master.clinica}"/>
                                 </p:column>
 
@@ -117,9 +120,9 @@
                         <p:dialog id="dlgActualizarEncargada" header="Actualizar Registro" widgetVar="dlgActualizar" showEffect="drop" hideEffect="drop" modal="true">
                             <h:form id="formActualizar">
                                 <p:panelGrid columns="2" style="margin: 0 auto; font-size: 11px;">
-                                    <p:outputLabel value="Matriculaa:"/>
+                                    <p:outputLabel value="Número de empleado:"/>
                                     <p:inputText value="#{beanEncargadaClinica.encargada.idEmpleado}"
-                                                 disabled="true" required="true" requiredMessage="Matricula es obligatorio"/>
+                                                 disabled="true" required="true" requiredMessage="Numero de Empleado es Obligatorio"/>
 
                                     <p:outputLabel value="Nombre:"/>
                                     <p:inputText value="#{beanEncargadaClinica.encargada.nombre}"
@@ -132,13 +135,13 @@
                                     <p:outputLabel value="Apellido Materno"/>
                                     <p:inputText value="#{beanEncargadaClinica.encargada.apellidoMaterno}"/>
 
-                                    <p:outputLabel value="Clinica"/>
+                                    <p:outputLabel value="Clínica"/>
                                     <p:selectOneMenu id="clinica" value="#{beanEncargadaClinica.encargada.clinica}"
                                                      required="true" requiredMessage="Seleccione la clinica">
                                         <f:selectItem itemLabel="---Seleccione---" itemValue="" noSelectionOption="true"/>
-                                        <f:selectItem itemLabel="Clinica 1" itemValue="Clinica 1"/>
-                                        <f:selectItem itemLabel="Clinica 2" itemValue="Clinica 2"/>
-                                        <f:selectItem itemLabel="Clinica 3" itemValue="Clinica 3"/>
+                                        <f:selectItem itemLabel="Clínica 1" itemValue="Clínica 1"/>
+                                        <f:selectItem itemLabel="Clínica 2" itemValue="Clínica 2"/>
+                                        <f:selectItem itemLabel="Clínica 3" itemValue="Clínica 3"/>
 
                                         <f:ajax execute="clinica" />
                                     </p:selectOneMenu>
@@ -157,10 +160,8 @@
 
                                     <p:commandButton value="Guardar" actionListener="#{beanEncargadaClinica.actualizarEncargada()}"  
                                                      oncomplete="PF('dlgActualizar').hide();" update=":formActualizar :formMostrarEncargada:tablaMostrarEncargada" />
-                                    <p:commandButton value="Cancelar"
-                                                     update=":formActualizar" immediate="true" 
-                                                     onclick="PF('dlgNuevo').hide();" />
-
+                                    <p:commandButton value="Cancelar" onclick="PF('dlgEditar').hide();"
+                                                     immediate="true" />
                                 </p:panelGrid>
                             </h:form>
                         </p:dialog>

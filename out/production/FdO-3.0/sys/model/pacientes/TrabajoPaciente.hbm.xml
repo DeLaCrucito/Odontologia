@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.TrabajoPaciente" table="trabajo_paciente" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="ocupacion" type="string">
+            <column name="ocupacion" not-null="true" />
+        </property>
+        <property name="lugarTrabajo" type="string">
+            <column name="lugar_trabajo" not-null="true" />
+        </property>
+        <property name="telefonoTrabajo" type="string">
+            <column name="telefono_trabajo" length="15" not-null="true" />
+        </property>
+        <set name="pacientes" table="paciente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ocupacion" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.pacientes.Paciente" />
+        </set>
+    </class>
+</hibernate-mapping>

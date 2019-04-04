@@ -6,15 +6,395 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2681d280-409f-4e6b-81b2-a6adb5a87cf9" name="Default" comment="Final">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javax.servlet-api-4.0.0-b01.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/jsf-api-2.2.18.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7df7f0b3-ef1b-48eb-92ed-22a48212f477.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7df7f0b3-ef1b-48eb-92ed-22a48212f477.xml" afterDir="false" />
+    <list default="true" id="2681d280-409f-4e6b-81b2-a6adb5a87cf9" name="Default" comment="Nuevo Odontograma">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Luzma.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/OdontologiaFINAL/OdontologiaFINAL.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/clases/Clave.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/LoginAlumnoFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/LoginFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/alumnoFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/coordinacionFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/farmaciaFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/maestroFiltro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/hibernate.cfg.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/hibernate.reveng.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanBitacora.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanEncargadaClinica.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanListaAlumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaestro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaestroMaterias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaterias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanReportes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanTratamiento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Expi/BeanConsulta.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Expi/BeanNuevoPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanAlumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanImagenes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanLoginSesion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoAlumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoAreaTratamientos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoBitacora.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoConsultaPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoEncargadaDeFarmacia.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoListaAlumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoLoginSesion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaestro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaestroMaterias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaterias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoNuevoPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/ejemploInterface.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/AlumnosImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/BitacoraImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ConsultaPacienteImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/EncargadaClinicaImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ListaAlumnosImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/LoginSesionImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MaestroImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MaestroMateriasImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MateriasImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/NuevoPacienteImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/TratamientosImp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ejemploImplementacion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Alumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Alumnos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/AreaTratamientos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/AreaTratamientos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/BitacoraRecibos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/BitacoraRecibos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/EncargadaClinica.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/EncargadaClinica.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/ListaAlumnos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/ListaAlumnos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Maestro.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Maestro.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MaestroMaterias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MaestroMaterias.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Materias.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Materias.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MenuTratamientos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MenuTratamientos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/SesionTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/AnalisisOclusion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/AnalisisOclusion.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Atm.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Atm.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Consultas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Consultas.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ControlPlaca.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ControlPlaca.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/DireccionPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/DireccionPaciente.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOral.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOral.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOrofacial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOrofacial.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/HallazgosRadiograficos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/HallazgosRadiograficos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/MedicoPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/MedicoPaciente.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Paciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Paciente.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Periodontograma.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Periodontograma.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PlanTratamiento.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PlanTratamiento.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PreguntasPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PreguntasPaciente.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/TrabajoPaciente.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/TrabajoPaciente.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Tratamientos.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Tratamientos.hbm.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/util/HibernateUtil.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/gallery/10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/gallery/8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/resources/gallery/9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FdO-3.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FdO-3.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sys/bean/beanImagenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/beanImagenes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/Coordinadora/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/Principal.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Coordinadora/reportes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/reportes.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Maestro/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/Principal.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/gallery/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/gallery/7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85o.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85oc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85x.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/jasperrreport/target/" />
@@ -24,62 +404,122 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="ErrorTreeViewConfiguration">
     <option name="hideWarnings" value="true" />
     <option name="HIDE_WARNINGS" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Login.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/filters/alumnoFiltro.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Coordinadora/Principal.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3094">
-              <caret line="182" column="86" lean-forward="true" selection-start-line="182" selection-start-column="86" selection-end-line="182" selection-end-column="86" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2992">
-              <caret line="176" column="37" lean-forward="true" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+        <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="54">
+              <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="274" column="115" selection-start-line="274" selection-start-column="104" selection-end-line="274" selection-end-column="115" />
+              <folding>
+                <element signature="e#11357#11358#0" expanded="true" />
+                <element signature="e#11397#11398#0" expanded="true" />
+                <element signature="e#11426#11427#0" expanded="true" />
+                <element signature="e#11454#11455#0" expanded="true" />
+                <element signature="e#11493#11494#0" expanded="true" />
+                <element signature="e#11527#11528#0" expanded="true" />
+                <element signature="e#11574#11575#0" expanded="true" />
+                <element signature="e#11609#11610#0" expanded="true" />
+                <element signature="e#11673#11674#0" expanded="true" />
+                <element signature="e#11721#11722#0" expanded="true" />
+                <element signature="e#11763#11764#0" expanded="true" />
+                <element signature="e#11794#11795#0" expanded="true" />
+                <element signature="e#11844#11845#0" expanded="true" />
+                <element signature="e#11884#11885#0" expanded="true" />
+                <element signature="e#16399#16400#0" expanded="true" />
+                <element signature="e#16434#16435#0" expanded="true" />
+                <element signature="e#16563#16564#0" expanded="true" />
+                <element signature="e#16611#16612#0" expanded="true" />
+                <element signature="e#16713#16714#0" expanded="true" />
+                <element signature="e#16751#16752#0" expanded="true" />
+                <element signature="e#16895#16896#0" expanded="true" />
+                <element signature="e#16949#16950#0" expanded="true" />
+                <element signature="e#17033#17034#0" expanded="true" />
+                <element signature="e#17065#17066#0" expanded="true" />
+                <element signature="e#17179#17180#0" expanded="true" />
+                <element signature="e#17221#17222#0" expanded="true" />
+                <element signature="e#17304#17305#0" expanded="true" />
+                <element signature="e#17337#17338#0" expanded="true" />
+                <element signature="e#17452#17453#0" expanded="true" />
+                <element signature="e#17496#17497#0" expanded="true" />
+                <element signature="e#17591#17592#0" expanded="true" />
+                <element signature="e#17630#17631#0" expanded="true" />
+                <element signature="e#17769#17770#0" expanded="true" />
+                <element signature="e#17825#17826#0" expanded="true" />
+                <element signature="e#17916#17917#0" expanded="true" />
+                <element signature="e#17953#17954#0" expanded="true" />
+                <element signature="e#18084#18085#0" expanded="true" />
+                <element signature="e#18136#18137#0" expanded="true" />
+                <element signature="e#18227#18228#0" expanded="true" />
+                <element signature="e#18264#18265#0" expanded="true" />
+                <element signature="e#18395#18396#0" expanded="true" />
+                <element signature="e#18447#18448#0" expanded="true" />
+                <element signature="e#18536#18537#0" expanded="true" />
+                <element signature="e#18572#18573#0" expanded="true" />
+                <element signature="e#18699#18700#0" expanded="true" />
+                <element signature="e#18749#18750#0" expanded="true" />
+                <element signature="e#19172#19173#0" expanded="true" />
+                <element signature="e#19226#19227#0" expanded="true" />
+                <element signature="e#19307#19308#0" expanded="true" />
+                <element signature="e#19339#19340#0" expanded="true" />
+                <element signature="e#19450#19451#0" expanded="true" />
+                <element signature="e#19492#19493#0" expanded="true" />
+                <element signature="e#19904#19905#0" expanded="true" />
+                <element signature="e#19952#19953#0" expanded="true" />
+                <element signature="e#20052#20053#0" expanded="true" />
+                <element signature="e#20090#20091#0" expanded="true" />
+                <element signature="e#20231#20232#0" expanded="true" />
+                <element signature="e#20285#20286#0" expanded="true" />
+                <element signature="e#20393#20394#0" expanded="true" />
+                <element signature="e#20434#20435#0" expanded="true" />
+                <element signature="e#20731#20732#0" expanded="true" />
+                <element signature="e#20762#20763#0" expanded="true" />
+                <element signature="e#20871#20872#0" expanded="true" />
+                <element signature="e#20911#20912#0" expanded="true" />
+                <element signature="e#20983#20984#0" expanded="true" />
+                <element signature="e#21011#21012#0" expanded="true" />
+                <element signature="e#21105#21106#0" expanded="true" />
+                <element signature="e#21139#21140#0" expanded="true" />
+                <element signature="e#21209#21210#0" expanded="true" />
+                <element signature="e#21237#21238#0" expanded="true" />
+                <element signature="e#21329#21330#0" expanded="true" />
+                <element signature="e#21363#21364#0" expanded="true" />
+                <element signature="e#21436#21437#0" expanded="true" />
+                <element signature="e#21465#21466#0" expanded="true" />
+                <element signature="e#21562#21563#0" expanded="true" />
+                <element signature="e#21598#21599#0" expanded="true" />
+                <element signature="e#21629#21630#0" expanded="true" />
+                <element signature="e#21659#21660#0" expanded="true" />
+                <element signature="e#21702#21703#0" expanded="true" />
+                <element signature="e#21740#21741#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,31 +528,91 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dlgEliminar</find>
-      <find>formEliminarMateria</find>
+      <find>bean</find>
+      <find>obtie</find>
+      <find>Cues</find>
+      <find>area</find>
+      <find>dienteimg</find>
+      <find>varios</find>
+      <find>consulta</find>
+      <find>pero</find>
+      <find>verperio</find>
+      <find>Consulta</find>
+      <find>ConsultaPaciente</find>
+      <find>obtener</find>
+      <find>savecontrol</find>
+      <find>odo</find>
+      <find>f d</find>
+      <find>asignar</find>
+      <find>ConsultaPa</find>
+      <find>E</find>
+      <find>dienteBDper</find>
+      <find>Odontograma</find>
+      <find>dienteBDp</find>
+      <find>verperi</find>
+      <find>ControlPlaca</find>
+      <find>periodonto</find>
+      <find>Envia</find>
+      <find>dientes</find>
+      <find>obtiene</find>
+      <find>subse</find>
+      <find>subsecuente</find>
+      <find>nuevo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="De La Cruz Ek Oscar" />
         <option value="al044144@uacam.mx" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="3969c3ac-5ef0-4fc5-9e89-4500c267b589" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/clases/Clave.java" />
         <option value="$PROJECT_DIR$/src/sys/bean/Bita/beanMaestro.java" />
-        <option value="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" />
-        <option value="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" />
-        <option value="$PROJECT_DIR$/src/sys/dao/daoConsultaPaciente.java" />
         <option value="$PROJECT_DIR$/src/sys/imp/ConsultaPacienteImp.java" />
-        <option value="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" />
-        <option value="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" />
-        <option value="$PROJECT_DIR$/web/Login.xhtml" />
         <option value="$PROJECT_DIR$/web/Coordinadora/Principal.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" />
+        <option value="$PROJECT_DIR$/web/Coordinadora/reportes.xhtml" />
+        <option value="$PROJECT_DIR$/web/Login.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml" />
+        <option value="$PROJECT_DIR$/src/sys/bean/beanImagenes.java" />
+        <option value="$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml" />
+        <option value="$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml" />
+        <option value="$PROJECT_DIR$/web/Maestro/Principal.xhtml" />
+        <option value="$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml" />
+        <option value="$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml" />
+        <option value="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/ControlPlaca_1.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" />
+        <option value="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml" />
+        <option value="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml" />
+        <option value="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml" />
+        <option value="$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml" />
+        <option value="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" />
+        <option value="$PROJECT_DIR$/src/sys/dao/daoConsultaPaciente.java" />
+        <option value="$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml" />
+        <option value="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" />
+        <option value="$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml" />
+        <option value="$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml" />
       </list>
     </option>
   </component>
@@ -131,32 +631,33 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="10" />
-    <option name="y" value="20" />
-    <option name="width" value="1346" />
-    <option name="height" value="688" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="FdO-3.0" type="b2602c69:ProjectViewProjectNode" />
-              <item name="3" type="462c0819:PsiDirectoryNode" />
+              <item name="OdontologiaDos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="module" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
@@ -172,7 +673,8 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551400682609" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554410117706" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="dynamic.classpath" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -181,7 +683,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3828221" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -226,7 +728,7 @@
         <option name="COMPATIBILITY" value="false" />
         <option name="VIRTUAL_SERVER" />
         <option name="USERNAME" value="admin" />
-        <option name="CREDENTIAL_ALIAS" />
+        <option name="PASSWORD" value="" />
       </server-settings>
       <predefined_log_file enabled="true" id="GlassFish" />
       <RunnerSettings RunnerId="Debug">
@@ -277,7 +779,11 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method v="2" />
+      <method v="2">
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="OdontologiaFINAL" />
+        </option>
+      </method>
     </configuration>
     <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
@@ -287,7 +793,7 @@
         <option name="COMPATIBILITY" value="false" />
         <option name="VIRTUAL_SERVER" />
         <option name="USERNAME" value="admin" />
-        <option name="CREDENTIAL_ALIAS" />
+        <option name="PASSWORD" value="" />
       </server-settings>
       <predefined_log_file enabled="true" id="GlassFish" />
       <RunnerSettings RunnerId="Debug">
@@ -350,7 +856,6 @@
       </method>
     </configuration>
     <configuration default="true" type="TestNG">
-      <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <properties />
       <listeners />
@@ -389,11 +894,32 @@
       <workItem from="1543966410497" duration="9403000" />
       <workItem from="1545162631027" duration="4768000" />
       <workItem from="1551397875688" duration="2865000" />
+      <workItem from="1553131421579" duration="3184000" />
+      <workItem from="1553197558572" duration="2765000" />
+      <workItem from="1553201878338" duration="452000" />
+      <workItem from="1553203802549" duration="1380000" />
+      <workItem from="1553206402141" duration="15424000" />
+      <workItem from="1553268369167" duration="7825000" />
+      <workItem from="1553290618713" duration="1659000" />
+      <workItem from="1553295463455" duration="2941000" />
+      <workItem from="1553302090130" duration="1589000" />
+      <workItem from="1553551427654" duration="638000" />
+      <workItem from="1553641314537" duration="712000" />
+      <workItem from="1553648527898" duration="2622000" />
+      <workItem from="1553709896428" duration="2424000" />
+      <workItem from="1553728413142" duration="11267000" />
+      <workItem from="1554170303279" duration="461000" />
+      <workItem from="1554171979406" duration="2937000" />
+      <workItem from="1554175726671" duration="1860000" />
+      <workItem from="1554222628042" duration="14060000" />
+      <workItem from="1554245654892" duration="10078000" />
+      <workItem from="1554313951594" duration="14702000" />
+      <workItem from="1554407877908" duration="2180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97921000" />
+    <option name="totallyTimeSpent" value="199134000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -406,286 +932,152 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49344262" visible="true" weight="0.28441754" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4874214" visible="true" weight="0.3139183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Persistence" order="2" sideWeight="0.5065574" side_tool="true" weight="0.2806354" />
+      <window_info id="Persistence" order="2" sideWeight="0.5125786" side_tool="true" weight="0.2596525" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Web" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info id="Learn" order="9" weight="0.32995737" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49924356" visible="true" weight="0.2831424" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496139" weight="0.26258206" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.32569557" />
+      <window_info anchor="bottom" id="Application Servers" order="7" sideWeight="0.49924356" weight="0.32733223" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924356" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015129" side_tool="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" sideWeight="0.49924356" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Changes" order="11" sideWeight="0.49924356" weight="0.3289689" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49848714" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3255814" />
+      <window_info anchor="bottom" id="Spring" order="14" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.015991472" />
+      <window_info anchor="right" id="JSF" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32967034" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Remote Host" order="10" weight="0.32980332" />
+      <window_info anchor="right" id="Maven" order="11" />
+      <window_info anchor="right" id="CDI" order="12" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4874214" visible="true" weight="0.33041576" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Persistence" order="2" sideWeight="0.5125786" side_tool="true" weight="0.2596525" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info id="Learn" order="9" weight="0.32995737" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.496139" weight="0.26350245" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3262295" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32786885" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50075644" side_tool="true" weight="0.28360656" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.503861" side_tool="true" weight="0.09812819" />
       <window_info anchor="bottom" id="Java Enterprise" order="10" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.32569557" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.3255814" />
       <window_info anchor="bottom" id="Spring" order="14" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="CDI" />
+      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Ant Build" order="4" weight="0.015991472" />
       <window_info anchor="right" id="JSF" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32967034" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info anchor="right" id="Remote Host" order="10" weight="0.32980332" />
-    </layout>
+      <window_info anchor="right" id="Maven" order="11" />
+      <window_info anchor="right" id="CDI" order="12" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final" />
+    <MESSAGE value="Nuevo Odontograma" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nuevo Odontograma" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java</url>
+          <line>169</line>
+          <properties class="sys.bean.Expi.BeanConsulta" method="EliminarConsulta">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java</url>
+          <line>196</line>
+          <properties class="sys.bean.Expi.BeanConsulta" method="Obtienetodo">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/orofacial/Atm.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1363">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Bita/beanMaestroMaterias.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1530">
-          <caret line="131" column="17" selection-start-line="131" selection-start-column="17" selection-end-line="131" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/NuevoPaciente.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/ControlPlaca_1.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3944">
-          <caret line="179" column="36" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/MaestroImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1853">
-          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Bita/beanTratamiento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/ListaAlumnosImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/BitacoraImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1360">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/ConsultaSubsecuente.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Bita/beanMaestro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-834">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Bita/beanEncargadaClinica.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="65" column="53" selection-start-line="65" selection-start-column="53" selection-end-line="65" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/model/pacientes/Consultas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/EncargadaClinicaImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="74" column="25" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="74" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/model/pacientes/Paciente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-952">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="161" column="54" selection-start-line="161" selection-start-column="54" selection-end-line="161" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/ConsultaPacienteImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3247">
-          <caret line="206" column="63" selection-start-line="206" selection-start-column="63" selection-end-line="206" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/Historial.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="42" selection-start-line="33" selection-start-column="42" selection-end-line="33" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="38" selection-start-line="75" selection-start-column="38" selection-end-line="75" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/beanImagenes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/beanAlumnos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Bita/beanReportes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1648">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/model/pacientes/DireccionPaciente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clases/Clave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/viewControlPlaca.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3400">
-          <caret line="269" column="41" selection-start-line="269" selection-start-column="41" selection-end-line="269" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/model/SesionTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-          <folding>
-            <element signature="e#1956#1957#0" expanded="true" />
-            <element signature="e#1983#1984#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/imp/NuevoPacienteImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="46" column="31" selection-start-line="46" selection-end-line="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sys/dao/daoConsultaPaciente.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/jasperrreport/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/web/Alumnos/Consultas.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sys/util/HibernateUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -737,35 +1129,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Login.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sys/model/Alumnos.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/beans.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -776,31 +1147,358 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="69" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Coordinadora/reportes.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1717">
+          <caret line="101" column="80" selection-start-line="101" selection-start-column="80" selection-end-line="101" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/ExaOrofacial.xhtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="136" column="20" lean-forward="true" selection-start-line="136" selection-start-column="20" selection-end-line="136" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/Coordinadora/Principal.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        <state relative-caret-position="357">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret line="15" column="41" lean-forward="true" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/resources/bootstrap/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4437" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="163" column="72" selection-start-line="163" selection-start-column="72" selection-end-line="163" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/EncargadaDeFarmacia/Tratamientos.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Coordinadora/Materias.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="111" column="72" lean-forward="true" selection-start-line="111" selection-start-column="72" selection-end-line="111" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="14" column="45" lean-forward="true" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="699" column="32" selection-start-line="699" selection-start-column="32" selection-end-line="699" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/LoginAlumno.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/Historial.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/Pruebas.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-79" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Paciente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sys/bean/beanImagenes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Maestro/Principal.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAltaLogin.xhtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="63" selection-start-line="38" selection-start-column="63" selection-end-line="38" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="56" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="86" lean-forward="true" selection-start-line="182" selection-start-column="86" selection-end-line="182" selection-end-column="86" />
+        <state relative-caret-position="3689">
+          <caret line="217" column="83" selection-start-line="217" selection-start-column="83" selection-end-line="217" selection-end-column="83" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml">
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/ControlPlaca_1.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="176" column="37" lean-forward="true" selection-start-line="176" selection-start-column="37" selection-end-line="176" selection-end-column="37" />
+        <state relative-caret-position="799">
+          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/META-INF/context.xml">
+    <entry file="file://$PROJECT_DIR$/web/Login.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="529">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sys/dao/daoConsultaPaciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="18" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/ConsultaSubsecuente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="28" column="68" lean-forward="true" selection-start-line="28" selection-start-column="68" selection-end-line="28" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/Consultas.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="113" column="83" selection-start-line="113" selection-start-column="83" selection-end-line="113" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/NuevoPaciente.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="33" column="75" lean-forward="true" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="28" column="84" selection-start-line="28" selection-start-column="84" selection-end-line="28" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/viewControlPlaca.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="79" selection-start-line="53" selection-start-column="67" selection-end-line="53" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2873">
+          <caret line="190" column="46" selection-start-line="190" selection-start-column="46" selection-end-line="190" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="274" column="115" selection-start-line="274" selection-start-column="104" selection-end-line="274" selection-end-column="115" />
+          <folding>
+            <element signature="e#11357#11358#0" expanded="true" />
+            <element signature="e#11397#11398#0" expanded="true" />
+            <element signature="e#11426#11427#0" expanded="true" />
+            <element signature="e#11454#11455#0" expanded="true" />
+            <element signature="e#11493#11494#0" expanded="true" />
+            <element signature="e#11527#11528#0" expanded="true" />
+            <element signature="e#11574#11575#0" expanded="true" />
+            <element signature="e#11609#11610#0" expanded="true" />
+            <element signature="e#11673#11674#0" expanded="true" />
+            <element signature="e#11721#11722#0" expanded="true" />
+            <element signature="e#11763#11764#0" expanded="true" />
+            <element signature="e#11794#11795#0" expanded="true" />
+            <element signature="e#11844#11845#0" expanded="true" />
+            <element signature="e#11884#11885#0" expanded="true" />
+            <element signature="e#16399#16400#0" expanded="true" />
+            <element signature="e#16434#16435#0" expanded="true" />
+            <element signature="e#16563#16564#0" expanded="true" />
+            <element signature="e#16611#16612#0" expanded="true" />
+            <element signature="e#16713#16714#0" expanded="true" />
+            <element signature="e#16751#16752#0" expanded="true" />
+            <element signature="e#16895#16896#0" expanded="true" />
+            <element signature="e#16949#16950#0" expanded="true" />
+            <element signature="e#17033#17034#0" expanded="true" />
+            <element signature="e#17065#17066#0" expanded="true" />
+            <element signature="e#17179#17180#0" expanded="true" />
+            <element signature="e#17221#17222#0" expanded="true" />
+            <element signature="e#17304#17305#0" expanded="true" />
+            <element signature="e#17337#17338#0" expanded="true" />
+            <element signature="e#17452#17453#0" expanded="true" />
+            <element signature="e#17496#17497#0" expanded="true" />
+            <element signature="e#17591#17592#0" expanded="true" />
+            <element signature="e#17630#17631#0" expanded="true" />
+            <element signature="e#17769#17770#0" expanded="true" />
+            <element signature="e#17825#17826#0" expanded="true" />
+            <element signature="e#17916#17917#0" expanded="true" />
+            <element signature="e#17953#17954#0" expanded="true" />
+            <element signature="e#18084#18085#0" expanded="true" />
+            <element signature="e#18136#18137#0" expanded="true" />
+            <element signature="e#18227#18228#0" expanded="true" />
+            <element signature="e#18264#18265#0" expanded="true" />
+            <element signature="e#18395#18396#0" expanded="true" />
+            <element signature="e#18447#18448#0" expanded="true" />
+            <element signature="e#18536#18537#0" expanded="true" />
+            <element signature="e#18572#18573#0" expanded="true" />
+            <element signature="e#18699#18700#0" expanded="true" />
+            <element signature="e#18749#18750#0" expanded="true" />
+            <element signature="e#19172#19173#0" expanded="true" />
+            <element signature="e#19226#19227#0" expanded="true" />
+            <element signature="e#19307#19308#0" expanded="true" />
+            <element signature="e#19339#19340#0" expanded="true" />
+            <element signature="e#19450#19451#0" expanded="true" />
+            <element signature="e#19492#19493#0" expanded="true" />
+            <element signature="e#19904#19905#0" expanded="true" />
+            <element signature="e#19952#19953#0" expanded="true" />
+            <element signature="e#20052#20053#0" expanded="true" />
+            <element signature="e#20090#20091#0" expanded="true" />
+            <element signature="e#20231#20232#0" expanded="true" />
+            <element signature="e#20285#20286#0" expanded="true" />
+            <element signature="e#20393#20394#0" expanded="true" />
+            <element signature="e#20434#20435#0" expanded="true" />
+            <element signature="e#20731#20732#0" expanded="true" />
+            <element signature="e#20762#20763#0" expanded="true" />
+            <element signature="e#20871#20872#0" expanded="true" />
+            <element signature="e#20911#20912#0" expanded="true" />
+            <element signature="e#20983#20984#0" expanded="true" />
+            <element signature="e#21011#21012#0" expanded="true" />
+            <element signature="e#21105#21106#0" expanded="true" />
+            <element signature="e#21139#21140#0" expanded="true" />
+            <element signature="e#21209#21210#0" expanded="true" />
+            <element signature="e#21237#21238#0" expanded="true" />
+            <element signature="e#21329#21330#0" expanded="true" />
+            <element signature="e#21363#21364#0" expanded="true" />
+            <element signature="e#21436#21437#0" expanded="true" />
+            <element signature="e#21465#21466#0" expanded="true" />
+            <element signature="e#21562#21563#0" expanded="true" />
+            <element signature="e#21598#21599#0" expanded="true" />
+            <element signature="e#21629#21630#0" expanded="true" />
+            <element signature="e#21659#21660#0" expanded="true" />
+            <element signature="e#21702#21703#0" expanded="true" />
+            <element signature="e#21740#21741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="68" column="15" selection-start-line="68" selection-start-column="15" selection-end-line="68" selection-end-column="15" />
         </state>
       </provider>
     </entry>

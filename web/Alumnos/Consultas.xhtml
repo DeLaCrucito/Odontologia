@@ -60,8 +60,7 @@
 
                                     <p:outputLabel value="Folio  "/><p:spacer width="10" height="10"/>
                                     <p:inputText id="folio" value="#{ConsultaPaciente.paciente.folio}"
-                                                 required="true" requ
-                                                 iredMessage="Ingrese el folio">
+                                                 required="true" requiredMessage="Ingrese el folio">
                                     <p:ajax event="keyup" listener="#{ConsultaPaciente.folioPaciente()}"  update=":formMostrar:dataTable"></p:ajax>
                                     </p:inputText>
 

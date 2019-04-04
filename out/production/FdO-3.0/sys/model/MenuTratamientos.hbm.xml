@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 14/10/2017 07:17:02 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.MenuTratamientos" table="menu_tratamientos" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="contador" type="java.lang.Integer">
+            <column name="contador" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="areaTratamientos" class="sys.model.AreaTratamientos" fetch="select">
+            <column name="area_tratamiento" not-null="true" />
+        </many-to-one>
+        <property name="nameTratamiento" type="string">
+            <column name="name_tratamiento" length="50" not-null="true" />
+        </property>
+        <set name="bitacoraReciboses" table="bitacora_recibos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="tratamiento" not-null="true" />
+            </key>
+            <one-to-many class="sys.model.BitacoraRecibos" />
+        </set>
+    </class>
+</hibernate-mapping>

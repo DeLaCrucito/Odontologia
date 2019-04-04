@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 17-jul-2018 21:17:56 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="sys.model.pacientes.PreguntasPaciente" table="preguntas_paciente" catalog="facultad_odontologia" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="paciente" class="sys.model.pacientes.Paciente" fetch="select">
+            <column name="paciente" not-null="true" />
+        </many-to-one>
+        <property name="padecimientos" type="string">
+            <column name="padecimientos" length="6000" not-null="true" />
+        </property>
+        <property name="alergiasMedicamentos" type="string">
+            <column name="alergias_medicamentos" length="6000" not-null="true" />
+        </property>
+        <property name="p1" type="string">
+            <column name="p1" length="11" not-null="true" />
+        </property>
+        <property name="p2" type="string">
+            <column name="p2" length="11" not-null="true" />
+        </property>
+        <property name="p3" type="string">
+            <column name="p3" length="11" not-null="true" />
+        </property>
+        <property name="p4" type="string">
+            <column name="p4" length="11" not-null="true" />
+        </property>
+        <property name="p5" type="string">
+            <column name="p5" length="11" not-null="true" />
+        </property>
+        <property name="p6" type="string">
+            <column name="p6" length="11" not-null="true" />
+        </property>
+        <property name="p7" type="string">
+            <column name="p7" length="11" not-null="true" />
+        </property>
+        <property name="p8" type="string">
+            <column name="p8" length="11" not-null="true" />
+        </property>
+        <property name="p9" type="string">
+            <column name="p9" length="11" not-null="true" />
+        </property>
+        <property name="p10" type="string">
+            <column name="p10" length="11" not-null="true" />
+        </property>
+        <property name="p11" type="string">
+            <column name="p11" length="11" not-null="true" />
+        </property>
+        <property name="p12" type="string">
+            <column name="p12" length="11" not-null="true" />
+        </property>
+        <property name="p13" type="string">
+            <column name="p13" length="11" not-null="true" />
+        </property>
+        <property name="p14" type="string">
+            <column name="p14" length="11" not-null="true" />
+        </property>
+        <property name="p15" type="string">
+            <column name="p15" length="11" not-null="true" />
+        </property>
+        <property name="p16" type="string">
+            <column name="p16" length="11" not-null="true" />
+        </property>
+        <property name="p17" type="string">
+            <column name="p17" length="11" not-null="true" />
+        </property>
+        <property name="p18" type="string">
+            <column name="p18" length="11" not-null="true" />
+        </property>
+        <property name="p19" type="string">
+            <column name="p19" length="11" not-null="true" />
+        </property>
+        <property name="p20" type="string">
+            <column name="p20" length="11" not-null="true" />
+        </property>
+        <property name="p21" type="string">
+            <column name="p21" length="11" not-null="true" />
+        </property>
+        <property name="p22" type="string">
+            <column name="p22" length="11" not-null="true" />
+        </property>
+        <property name="p23" type="string">
+            <column name="p23" length="11" not-null="true" />
+        </property>
+        <property name="p24" type="string">
+            <column name="p24" length="11" not-null="true" />
+        </property>
+        <property name="p25" type="string">
+            <column name="p25" length="11" not-null="true" />
+        </property>
+        <property name="p26" type="string">
+            <column name="p26" length="11" not-null="true" />
+        </property>
+        <property name="p27" type="string">
+            <column name="p27" length="11" not-null="true" />
+        </property>
+        <property name="p28" type="string">
+            <column name="p28" length="11" not-null="true" />
+        </property>
+        <property name="p29" type="string">
+            <column name="p29" length="11" not-null="true" />
+        </property>
+        <property name="p30" type="string">
+            <column name="p30" length="11" not-null="true" />
+        </property>
+        <property name="p31" type="string">
+            <column name="p31" length="11" not-null="true" />
+        </property>
+        <property name="p32" type="string">
+            <column name="p32" length="11" not-null="true" />
+        </property>
+        <property name="p33" type="string">
+            <column name="p33" length="11" not-null="true" />
+        </property>
+        <property name="otros" type="string">
+            <column name="otros" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

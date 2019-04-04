@@ -17,16 +17,16 @@
                             <h:outputStylesheet library="css" name="odontograma.css"/>
                             <script>
                                 window.onload = function() {
-                                    var standard = "/FdO-3.0/pages/javax.faces.resource/";
+                                   <!-- var standard = "/FdO-3.0/pages/javax.faces.resource/";-->
                                     var caja = document.getElementById('j_idt61:Odontograma');
                                     var textobase = "#{ConsultaPaciente.dienteBDperi}";
                                     var arreglobase = textobase.split(",");
-                                    var seteadiente18 = document.getElementsByClassName("dienteimg");
+                                    var seteadiente18 = document.getElementsByClassName("area");
                                     var qwe = [];
                                     for (var i = 0; i &lt; seteadiente18.length; i++){
                                         for(var j = 0; j &lt; arreglobase.length; j++ ){
                                             if(i===j){
-                                                qwe[i] = seteadiente18[i].setAttribute("src",  standard+arreglobase[j]);
+                                                qwe[i] = seteadiente18[i].setAttribute("fill",arreglobase[j]);
                                             }
                                         }
                                     }
@@ -62,7 +62,7 @@
 
                              </h:panelGrid>
                              <p:spacer/>
-                            <p:remoteCommand name="Enviaimg" action="#{ConsultaPaciente.Obtienetodo}" process="@this"/>
+                            <p:remoteCommand name="Obtienetodo" action="#{ConsultaPaciente.Obtienetodo}" process="@this"/>
                         <p:remoteCommand name="Mensajes" action="#{ConsultaPaciente.info}" process="@this"/>
                         <h4>Paciente: <b>#{ConsultaPaciente.verperiodontograma.paciente.nombre}</b></h4>
                         <h4>Fecha de consulta: <b>#{ConsultaPaciente.cuando}</b></h4>
@@ -110,35 +110,295 @@
                                                 <h:outputLabel value="26"/>
                                                 <h:outputLabel value="27"/>
                                                 <h:outputLabel value="28"/>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/18.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/17.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/16.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/15.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/14.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/13.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/12.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/11.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/21.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/22.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/23.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/24.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/25.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/26.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/27.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/28.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon name ="18-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" class="area" fill="#ffffff" onclick="estados(this)"/>
+                                                            <polygon name ="18-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" class="area" fill="#ffffff" onclick="estados(this)"/>
+                                                            <polygon name ="18-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" class="area" fill="#ffffff" onclick="estados(this)"/>
+                                                            <polygon name ="18-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" class="area" fill="#ffffff" onclick="estados(this)"/>
+                                                            <rect name ="18-superior" x="111.55" y="111.56" width="243.93" height="243.93" class="area" fill="#ffffff" onclick="estados(this)"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="17-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="17-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="17-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="17-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="17-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="16-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="16-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="16-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="16-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="16-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="15-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="15-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="15-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="15-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="15-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="14-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="14-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="14-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="14-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="14-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="13-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="13-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="13-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="13-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="13-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="12-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="12-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="12-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="12-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="18-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="11-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="11-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="11-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="11-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="11-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="21-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="21-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="21-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="21-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="21-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="22-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="22-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="22-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="22-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="22-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="23-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="23-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="23-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="23-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="23-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="24-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="24-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="24-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="24-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="24-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="25-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="25-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="25-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="25-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="25-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="26-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="26-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="26-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="26-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="26-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="27-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="27-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="27-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="27-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="27-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="28-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="28-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="28-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="28-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="28-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
                                             </p:panelGrid>
                                             <p:spacer/>
                                             <p:panelGrid columns="10" class="panelGridCenter">
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/55.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/54.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/53.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/52.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/51.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/61.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/62.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/63.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/64.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/65.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="55-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="55-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="55-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="55-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="55-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="54-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="54-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="54-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="54-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="54-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="53-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="53-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="53-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="53-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="53-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="52-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="52-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="52-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="52-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="52-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="51-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="51-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="51-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="51-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="51-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="61-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="61-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="61-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="61-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="61-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="62-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="62-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="62-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="62-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="62-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="63-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="63-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="63-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="63-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="63-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="64-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="64-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="64-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="64-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="64-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="65-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="65-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="65-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="65-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="65-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
                                                 <h:outputLabel value="55"/>
                                                 <h:outputLabel value="54"/>
                                                 <h:outputLabel value="53"/>
@@ -162,35 +422,295 @@
                                                 <h:outputLabel value="73"/>
                                                 <h:outputLabel value="74"/>
                                                 <h:outputLabel value="75"/>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/85.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/84.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/83.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/82.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/81.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/71.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/72.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/73.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/74.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/75.png" class="dienteimg temporales" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="85-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="85-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="85-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="85-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="85-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="84-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="84-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="84-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="84-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="84-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="83-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="83-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="83-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="83-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="83-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="82-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="82-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="82-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="82-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="82-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="81-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="81-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="81-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="81-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="81-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="71-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="71-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="71-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="71-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="71-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="72-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="72-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="72-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="72-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="72-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="73-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="73-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="73-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="73-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="73-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="74-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="74-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="74-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="74-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="74-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="75-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="75-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="75-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="75-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="75-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
                                             </p:panelGrid>
                                             <p:spacer/>
                                             <p:panelGrid columns="16" class="panelGridCenter">
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/48.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/47.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/46.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/45.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/44.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/43.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/42.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/41.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/31.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/32.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/33.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/34.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/35.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/36.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/37.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
-                                                <h:panelGrid><p:graphicImage name="svg/dientes/38.png" class="dienteimg normalpic" onclick="estados(this)"/></h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="48-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="48-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="48-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="48-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="48-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="47-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="47-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="47-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="47-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="47-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="46-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="46-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="46-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="46-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="46-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="45-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="45-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="45-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="45-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="45-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="44-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="44-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="44-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="44-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="44-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="43-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="43-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="43-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="43-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="43-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="42-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="42-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="42-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="42-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="42-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="41-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="41-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="41-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="41-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="41-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="31-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="31-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="31-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="31-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="31-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="32-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="32-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="32-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="32-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="32-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="33-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="33-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="33-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="33-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="33-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="34-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="34-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="34-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="34-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="34-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="35-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="35-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="35-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="35-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="35-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="36-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="36-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="36-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="36-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="36-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="37-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="37-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="37-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="37-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="37-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
+                                                <h:panelGrid>
+                                                    <svg width="35" height="35" viewBox="0 0 500 500">
+                                                        <g stroke="#000" stroke-width="5">
+                                                            <polygon id ="38-delante" points="111.55 111.56 111.55 355.49 1.21 465.83 1.21 1.21 111.55 111.56" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="38-izquierda" points="465.83 1.21 355.48 111.56 111.55 111.56 1.21 1.21 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="38-derecha" points="465.83 1.21 465.83 465.83 355.48 355.49 355.48 111.56 465.83 1.21" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <polygon id ="38-atras" points="465.83 465.83 1.21 465.83 111.55 355.49 355.48 355.49 465.83 465.83" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                            <rect id ="38-superior" x="111.55" y="111.56" width="243.93" height="243.93" onclick="estados(this)" class="area" fill="#ffffff"/>
+                                                        </g>
+                                                    </svg>
+                                                </h:panelGrid>
                                                 <h:outputLabel value="48"/>
                                                 <h:outputLabel value="47"/>
                                                 <h:outputLabel value="46"/>
