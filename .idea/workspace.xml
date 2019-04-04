@@ -7,394 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2681d280-409f-4e6b-81b2-a6adb5a87cf9" name="Default" comment="Nuevo Odontograma">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Luzma.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/OdontologiaFINAL/OdontologiaFINAL.war" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/clases/Clave.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/LoginAlumnoFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/LoginFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/alumnoFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/coordinacionFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/farmaciaFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/filters/maestroFiltro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/hibernate.cfg.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/hibernate.reveng.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanBitacora.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanEncargadaClinica.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanListaAlumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaestro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaestroMaterias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanMaterias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanReportes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Bita/beanTratamiento.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Expi/BeanConsulta.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/Expi/BeanNuevoPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanAlumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanImagenes.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/bean/beanLoginSesion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoAlumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoAreaTratamientos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoBitacora.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoConsultaPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoEncargadaDeFarmacia.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoListaAlumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoLoginSesion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaestro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaestroMaterias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoMaterias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/daoNuevoPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/dao/ejemploInterface.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/AlumnosImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/BitacoraImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ConsultaPacienteImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/EncargadaClinicaImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ListaAlumnosImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/LoginSesionImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MaestroImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MaestroMateriasImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/MateriasImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/NuevoPacienteImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/TratamientosImp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/imp/ejemploImplementacion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Alumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Alumnos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/AreaTratamientos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/AreaTratamientos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/BitacoraRecibos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/BitacoraRecibos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/EncargadaClinica.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/EncargadaClinica.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/ListaAlumnos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/ListaAlumnos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Maestro.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Maestro.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MaestroMaterias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MaestroMaterias.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Materias.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/Materias.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MenuTratamientos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/MenuTratamientos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/SesionTable.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/AnalisisOclusion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/AnalisisOclusion.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Atm.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Atm.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Consultas.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Consultas.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ControlPlaca.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ControlPlaca.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/DireccionPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/DireccionPaciente.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOral.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOral.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOrofacial.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/ExamenOrofacial.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/HallazgosRadiograficos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/HallazgosRadiograficos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/MedicoPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/MedicoPaciente.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Paciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Paciente.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Periodontograma.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Periodontograma.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PlanTratamiento.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PlanTratamiento.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PreguntasPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/PreguntasPaciente.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/TrabajoPaciente.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/TrabajoPaciente.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Tratamientos.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/model/pacientes/Tratamientos.hbm.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/FdO-3.0/sys/util/HibernateUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/gallery/10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/gallery/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/resources/gallery/9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/Expi/BeanConsulta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/Expi/BeanNuevoPaciente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sys/bean/beanImagenes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sys/bean/beanImagenes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Consultas.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Historial.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/Periodontograma_1.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/ControlPlaca.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Cuestionario.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Odontograma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/svg/Periodontograma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Alumnos/viewPeriodontograma.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/EncargadaDeFarmacia.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/Maestros.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Coordinadora/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/Principal.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Coordinadora/reportes.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Coordinadora/reportes.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/EncargadaDeFarmacia/Principal.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Login.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/ListaAlumnos.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/ListaAlumnosTratamientos.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Maestro/Principal.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Maestro/Principal.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaAlumnos.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaCoordinacion.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaEncargadaDeFarmacia.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/web/Template/VistasMarcos/PlantillaMaestro.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/gallery/7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/web/resources/gallery/7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/11x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/12x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/13x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/14x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/15x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/16x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/17x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/18x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/21x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/22x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/23x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/24x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/25x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/26x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/27x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/28x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/31x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/32x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/33x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/34x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/35x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/36x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/37x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/38x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/41x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/42x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/43x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/44x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/45x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/46x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/47x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/48x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/51x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/52x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/53x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/54x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/55x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/61x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/62x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/63x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/64x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/65x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/71x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/72x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/73x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/74x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/75x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/81x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/82x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/83x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/84x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85o.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85oc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/resources/svg/dientes/85x.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/jasperrreport/target/" />
@@ -563,6 +176,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="DeLaCrucito &lt;al053938@uacam.mx&gt;" />
         <option value="De La Cruz Ek Oscar" />
         <option value="al044144@uacam.mx" />
       </list>
@@ -673,7 +287,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554410534248" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554410721243" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="dynamic.classpath" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
@@ -914,7 +528,7 @@
       <workItem from="1554222628042" duration="14060000" />
       <workItem from="1554245654892" duration="10078000" />
       <workItem from="1554313951594" duration="14702000" />
-      <workItem from="1554407877908" duration="2437000" />
+      <workItem from="1554407877908" duration="2776000" />
     </task>
     <task id="LOCAL-00001" summary="Nuevo Odontograma">
       <created>1554410258340</created>
@@ -923,11 +537,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554410258340</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Nuevo Odontograma">
+      <created>1554410689564</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1554410689564</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199391000" />
+    <option name="totallyTimeSpent" value="199730000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
